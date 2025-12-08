@@ -4,6 +4,7 @@ import ServicesSection from "@/components/services-section"
 import CustomersSection from "@/components/customers-section"
 import ContactSection from "@/components/contact-section"
 import ProductsSection from "@/components/products-section"
+import WhyChooseUsSection from "@/components/why-choose-us-section"
 import ContactBanner from "@/components/contact-banner"
 
 export default function Home() {
@@ -14,6 +15,7 @@ export default function Home() {
       <ProductsSection />
       {/* Small banner below products section */}
       <ContactBanner size="small" showButton={true} />
+      <WhyChooseUsSection />
       <ServicesSection />
       <CustomersSection />
       <ContactSection />

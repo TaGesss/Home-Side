@@ -1,0 +1,171 @@
+"use client";
+import { useState } from "react";
+
+const requestTypes = [
+  "Sample request",
+  "Availability",
+  "Custom clearance",
+  "Transport service",
+  "Quote",
+  "Proforma invoice",
+  "General info",
+  "Machinery Rental",
+  "Construction Materials",
+  "Other",
+];
+
+const countries = ["Ethiopia", "Kenya", "USA", "China", "India", "Germany", "Other"];
+
+export default function RequestInfoForm({ initialProduct = "" }) {
+  const [form, setForm] = useState({
+    name: "",
+    organization: "",
+    email: "",
+    phone: "",
+    country: "Ethiopia",
+    state: "",
+    city: "",
+    message: "",
+    requestType: "Sample request",
+    products: initialProduct ? [initialProduct] : [""],
+    other: "",
+  });
+
+  function handleChange(e) {
+    const { name, value } = e.target;
+    setForm((f) => ({ ...f, [name]: value }));
+  }
+
+  function handleProductChange(idx, value) {
+    const products = [...form.products];
+    products[idx] = value;
+    setForm((f) => ({ ...f, products }));
+  }
+
+  function addProduct() {
+    setForm((f) => ({ ...f, products: [...f.products, ""] }));
+  }
+
+  function removeProduct(idx) {
+    setForm((f) => ({ ...f, products: f.products.filter((_, i) => i !== idx) }));
+  }
+
+  function handleSubmit(e) {
+    e.preventDefault();
+    // TODO: handle submission (API, email, etc.)
+    alert("Request submitted! Thank you.");
+  }
+
+  // Dynamic dropdowns for request type
+  function renderTypeFields() {
+    switch (form.requestType) {
+      case "Sample request":
+        return (
+          <div className="space-y-2">
+            {form.products.map((prod, idx) => (
+              <div key={idx} className="flex gap-2 items-center">
+                <input
+                  type="text"
+                  name={`product${idx}`}
+                  value={prod}
+                  onChange={(e) => handleProductChange(idx, e.target.value)}
+                  placeholder="Export product name"
+                  className="border rounded px-3 py-2 w-full"
+                />
+                {form.products.length > 1 && (
+                  <button type="button" onClick={() => removeProduct(idx)} className="text-red-500">Remove</button>
+                )}
+              </div>
+            ))}
+            <button type="button" onClick={addProduct} className="text-primary mt-2">Add another product</button>
+          </div>
+        );
+      case "Availability":
+        return (
+          <div className="space-y-2">
+            <select name="availabilityType" onChange={handleChange} className="border rounded px-3 py-2 w-full">
+              <option value="Import">Import</option>
+              <option value="Export">Export</option>
+              <option value="Machinery Rental">Machinery Rental</option>
+              <option value="Transport">Transport</option>
+              <option value="Customs Clearance">Customs Clearance</option>
+              <option value="Construction Materials">Construction Materials</option>
+            </select>
+            <input type="text" name="availabilityProduct" onChange={handleChange} placeholder="Product or service" className="border rounded px-3 py-2 w-full" />
+          </div>
+        );
+      case "Custom clearance":
+        return (
+          <select name="customClearanceType" onChange={handleChange} className="border rounded px-3 py-2 w-full">
+            <option value="Import Clearance and Transit">Import Clearance and Transit</option>
+            <option value="Export Clearance and Transit">Export Clearance and Transit</option>
+            <option value="Bonded Warehousing">Bonded Warehousing</option>
+            <option value="Customs storage">Customs storage</option>
+            <option value="Documentation">Documentation</option>
+            <option value="Regulatory Compliance">Regulatory Compliance</option>
+          </select>
+        );
+      case "Transport service":
+        return (
+          <select name="transportType" onChange={handleChange} className="border rounded px-3 py-2 w-full">
+            <option value="Dry Freight Transport">Dry Freight Transport</option>
+            <option value="Container Transport">Container Transport</option>
+            <option value="Heavy Machinery Transport">Heavy Machinery Transport</option>
+            <option value="Cement and Aggregate Transport">Cement and Aggregate Transport</option>
+            <option value="Other transport services">Other transport services</option>
+          </select>
+        );
+      case "Machinery Rental":
+        return (
+          <select name="machineryType" onChange={handleChange} className="border rounded px-3 py-2 w-full">
+            <option value="Excavators">Excavators</option>
+            <option value="Bulldozers">Bulldozers</option>
+            <option value="Cranes (Mobile & Tower)">Cranes (Mobile & Tower)</option>
+            <option value="Generators">Generators</option>
+            <option value="Loaders">Loaders</option>
+          </select>
+        );
+      case "Construction Materials":
+        return (
+          <select name="constructionType" onChange={handleChange} className="border rounded px-3 py-2 w-full">
+            <option value="Cement & Concrete">Cement & Concrete</option>
+            <option value="Steel Products">Steel Products</option>
+            <option value="Finishing Materials">Finishing Materials</option>
+            <option value="Roofing Materials">Roofing Materials</option>
+            <option value="Plumbing & ElectricalHeating Equipment">Plumbing & ElectricalHeating Equipment</option>
+            <option value="Other Construction Materials">Other Construction Materials</option>
+          </select>
+        );
+      case "Other":
+        return (
+          <input type="text" name="other" value={form.other} onChange={handleChange} placeholder="Write your request" className="border rounded px-3 py-2 w-full" />
+        );
+      default:
+        return null;
+    }
+  }
+
+  return (
+    <form className="space-y-4" onSubmit={handleSubmit}>
+      <input type="text" name="name" value={form.name} onChange={handleChange} placeholder="Name" className="border rounded px-3 py-2 w-full" required />
+      <input type="text" name="organization" value={form.organization} onChange={handleChange} placeholder="Organization" className="border rounded px-3 py-2 w-full" />
+      <input type="email" name="email" value={form.email} onChange={handleChange} placeholder="Email" className="border rounded px-3 py-2 w-full" required />
+      <input type="tel" name="phone" value={form.phone} onChange={handleChange} placeholder="Phone" className="border rounded px-3 py-2 w-full" />
+      <select name="country" value={form.country} onChange={handleChange} className="border rounded px-3 py-2 w-full">
+        {countries.map((c) => (
+          <option key={c} value={c}>{c}</option>
+        ))}
+      </select>
+      <input type="text" name="state" value={form.state} onChange={handleChange} placeholder="State" className="border rounded px-3 py-2 w-full" />
+      <input type="text" name="city" value={form.city} onChange={handleChange} placeholder="City" className="border rounded px-3 py-2 w-full" />
+      <textarea name="message" value={form.message} onChange={handleChange} placeholder="Message" className="border rounded px-3 py-2 w-full" rows={3} />
+      <select name="requestType" value={form.requestType} onChange={handleChange} className="border rounded px-3 py-2 w-full">
+        {requestTypes.map((type) => (
+          <option key={type} value={type}>{type}</option>
+        ))}
+      </select>
+      {renderTypeFields()}
+      <button type="submit" className="bg-primary text-white px-6 py-2 rounded-full hover:bg-orange-400 transition font-semibold w-full">Submit Request</button>
+    </form>
+  );
+}

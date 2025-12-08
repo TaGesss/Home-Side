@@ -140,7 +140,7 @@ export default function CustomersSection() {
   }, []);
 
   return (
-    <section id="customers" className="py-20 bg-white relative overflow-hidden">
+    <section id="customers" className="py-20 bg-cream-50 relative overflow-hidden">
       {/* Many larger sunflower watermarks */}
       {seedPositions.map((pos, index) => (
         <div

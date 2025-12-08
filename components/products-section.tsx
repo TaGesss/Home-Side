@@ -131,25 +131,25 @@ export default function ProductsSection() {
   }, [])
 
   return (
-    <section id="products" className="py-20 relative overflow-hidden">
+    <section id="products" className="py-20 relative overflow-hidden bg-gradient-to-r from-primary-hover to-cream-50">
       <SeedWatermarksClient />
 
-      <div className="max-w-6xl mx-auto px-4 relative z-10">
+      <div className="w-full relative z-10">
         <h2 className="text-3xl font-bold text-center text-primary mb-6">Products</h2>
 
+        {/* Export Banner */}
         <div className="w-full mb-8">
-          <div className="mx-auto px-4">
-            <div className="bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-lg p-6 md:p-8 text-center">
-              <h3 className="text-2xl md:text-3xl font-semibold">Export</h3>
-              <p className="mt-2 text-sm md:text-base opacity-90">Explore products available for export — quality-checked and ready for international shipping.</p>
-            </div>
+          <div className="bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-none p-2 md:p-3 text-center w-full">
+            <h3 className="text-2xl md:text-3xl font-semibold">Export</h3>
+            <p className="mt-2 text-sm md:text-base opacity-90">Explore products available for export — quality-checked and ready for international shipping.</p>
           </div>
         </div>
 
-        <div className="relative">
-          <div className="absolute -left-2 top-1/2 transform -translate-y-1/2 z-20 hidden md:block">
-            <button aria-label="Scroll left" onClick={() => scrollByCardOffset('left')} className="bg-white p-2 rounded-full shadow">
-              <svg xmlns="http://www.w3.org/2000/svg" className="w-5 h-5 text-primary" viewBox="0 0 20 20" fill="currentColor"><path fillRule="evenodd" d="M12.293 15.707a1 1 0 01-1.414 0L5.586 10.414a1 1 0 010-1.414L10.879 3.707a1 1 0 011.414 1.414L8.414 9.999l5.293 5.293a1 1 0 010 1.414z" clipRule="evenodd"/></svg>
+        {/* Export Products Cards - auto-rotating, larger, full width */}
+        <div className="relative w-full">
+          <div className="absolute left-2 top-1/2 transform -translate-y-1/2 z-20 hidden md:block">
+            <button aria-label="Scroll left" onClick={() => scrollByCardOffset('left')} className="bg-white p-3 rounded-full shadow-lg">
+              <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6 text-primary" viewBox="0 0 20 20" fill="currentColor"><path fillRule="evenodd" d="M12.293 15.707a1 1 0 01-1.414 0L5.586 10.414a1 1 0 010-1.414L10.879 3.707a1 1 0 011.414 1.414L8.414 9.999l5.293 5.293a1 1 0 010 1.414z" clipRule="evenodd"/></svg>
             </button>
           </div>
 
@@ -157,63 +157,76 @@ export default function ProductsSection() {
             ref={containerRef}
             onMouseEnter={() => stopAutoScroll()}
             onMouseLeave={() => startAutoScroll()}
-            className="overflow-x-auto scroll-pl-6 snap-x snap-mandatory flex gap-4 py-4"
+            className="overflow-x-auto snap-x snap-mandatory flex gap-8 py-6 px-4 w-full"
+            style={{scrollBehavior: 'smooth'}}
           >
-            {/** render items twice to enable seamless looping */}
             {[...items, ...items].map((p, i) => (
-              <div key={p.title + '-' + i} className="snap-start flex-shrink-0 w-72 md:w-80 bg-white rounded-lg border border-gray-200 shadow-sm p-4">
+              <div key={p.title + '-' + i} className="snap-start flex-shrink-0 w-96 md:w-[28rem] bg-white rounded-3xl border border-gray-200 shadow-xl p-6 transition-all duration-300 hover:scale-105">
                 <div className="flex flex-col items-center">
-                  <div className="w-20 h-20 rounded-full overflow-hidden bg-white flex items-center justify-center border-2">
-                    <img src={p.img} alt={p.title} className="w-16 h-16 object-cover rounded-full" />
+                  <div className="w-32 h-32 rounded-2xl overflow-hidden bg-white flex items-center justify-center border-2">
+                    <img src={p.img} alt={p.title} className="w-28 h-28 object-cover rounded-2xl" />
                   </div>
-                  <div className="mt-3 text-center">
-                    <p className="text-sm text-primary-light">{p.title}</p>
+                  <div className="mt-4 text-center">
+                    <p className="text-lg font-semibold text-primary">{p.title}</p>
+                    <p className="text-sm text-primary-light mt-2">{p.description}</p>
                   </div>
+                  <Link href="/request-info?type=sample&product=" className="mt-4 block w-full text-center bg-orange-400 text-white py-2 rounded-full hover:bg-orange-500 transition font-medium">
+                    Request Sample
+                  </Link>
                 </div>
               </div>
             ))}
           </div>
 
-          <div className="absolute -right-2 top-1/2 transform -translate-y-1/2 z-20 hidden md:block">
-            <button aria-label="Scroll right" onClick={() => { scrollByCardOffset('right'); }} className="bg-white p-2 rounded-full shadow">
-              <svg xmlns="http://www.w3.org/2000/svg" className="w-5 h-5 text-primary" viewBox="0 0 20 20" fill="currentColor"><path fillRule="evenodd" d="M7.707 4.293a1 1 0 010 1.414L3.414 10l4.293 4.293a1 1 0 01-1.414 1.414l-5-5a1 1 0 010-1.414l5-5a1 1 0 011.414 0z" clipRule="evenodd"/></svg>
+          <div className="absolute right-2 top-1/2 transform -translate-y-1/2 z-20 hidden md:block">
+            <button aria-label="Scroll right" onClick={() => { scrollByCardOffset('right'); }} className="bg-white p-3 rounded-full shadow-lg">
+              <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6 text-primary" viewBox="0 0 20 20" fill="currentColor"><path fillRule="evenodd" d="M7.707 4.293a1 1 0 010 1.414L3.414 10l4.293 4.293a1 1 0 01-1.414 1.414l-5-5a1 1 0 010-1.414l5-5a1 1 0 011.414 0z" clipRule="evenodd"/></svg>
             </button>
           </div>
         </div>
 
-        <div className="mt-6 text-center">
-          <Link href="/products" className="inline-block px-6 py-2 rounded-lg bg-indigo-700 text-white hover:bg-indigo-800 transition">Show more</Link>
+        {/* Import Banner */}
+        <div className="w-full mt-12">
+          <div className="bg-gradient-to-r from-green-600 to-emerald-700 text-white rounded-none p-2 md:p-3 text-center w-full">
+            <h3 className="text-2xl md:text-3xl font-semibold">Import</h3>
+            <p className="mt-2 text-sm md:text-base opacity-90">Specializing in machinery, vehicles, and spare parts import with efficient customs clearance.</p>
+          </div>
         </div>
-      
-        {/* Import banner + card (mirrors ServicesSection Import card) */}
-        <div className="mt-12">
-          <div className="mx-auto px-4">
-            <div className="bg-gradient-to-r from-green-600 to-emerald-700 text-white rounded-lg p-6 md:p-8 text-center">
-              <h3 className="text-2xl md:text-3xl font-semibold">Import</h3>
-              <p className="mt-2 text-sm md:text-base opacity-90">Specializing in machinery, vehicles, and spare parts import with efficient customs clearance.</p>
-            </div>
+
+        {/* Import Products Cards - same as export */}
+        <div className="relative w-full mt-8">
+          <div className="absolute left-2 top-1/2 transform -translate-y-1/2 z-20 hidden md:block">
+            <button aria-label="Scroll left" onClick={() => scrollByCardOffset('left')} className="bg-white p-3 rounded-full shadow-lg">
+              <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6 text-primary" viewBox="0 0 20 20" fill="currentColor"><path fillRule="evenodd" d="M12.293 15.707a1 1 0 01-1.414 0L5.586 10.414a1 1 0 010-1.414L10.879 3.707a1 1 0 011.414 1.414L8.414 9.999l5.293 5.293a1 1 0 010 1.414z" clipRule="evenodd"/></svg>
+            </button>
           </div>
 
-          <div className="max-w-6xl mx-auto px-4 mt-8">
-            <div className="grid md:grid-cols-3 gap-8">
-              <div className="relative bg-white rounded-3xl shadow-xl transition-all duration-300 transform overflow-hidden">
-                <div className="p-6 md:p-8">
-                  <Image
-                    src="/images/import-service.jpg"
-                    alt="Import Services"
-                    width={384}
-                    height={192}
-                    className="w-full h-48 object-cover rounded-xl mb-4"
-                  />
-                  <h4 className="text-xl font-bold text-primary mb-3">Import Services</h4>
-                  <p className="text-primary-light mb-6">Specializing in machinery, vehicles, and spare parts import with efficient customs clearance.</p>
-
-                  <Link href="/services/import" className="block w-full text-center bg-orange-400 text-white py-3 rounded-full hover:bg-orange-500 transition font-medium">
-                    Learn More →
+          <div
+            className="overflow-x-auto snap-x snap-mandatory flex gap-8 py-6 px-4 w-full"
+            style={{scrollBehavior: 'smooth'}}
+          >
+            {[...items, ...items].map((p, i) => (
+              <div key={p.title + '-import-' + i} className="snap-start flex-shrink-0 w-96 md:w-[28rem] bg-white rounded-3xl border border-gray-200 shadow-xl p-6 transition-all duration-300 hover:scale-105">
+                <div className="flex flex-col items-center">
+                  <div className="w-32 h-32 rounded-2xl overflow-hidden bg-white flex items-center justify-center border-2">
+                    <img src={p.img} alt={p.title} className="w-28 h-28 object-cover rounded-2xl" />
+                  </div>
+                  <div className="mt-4 text-center">
+                    <p className="text-lg font-semibold text-primary">{p.title}</p>
+                    <p className="text-sm text-primary-light mt-2">{p.description}</p>
+                  </div>
+                  <Link href="/request-info?type=sample&product=" className="mt-4 block w-full text-center bg-orange-400 text-white py-2 rounded-full hover:bg-orange-500 transition font-medium">
+                    Request Sample
                   </Link>
                 </div>
               </div>
-            </div>
+            ))}
+          </div>
+
+          <div className="absolute right-2 top-1/2 transform -translate-y-1/2 z-20 hidden md:block">
+            <button aria-label="Scroll right" onClick={() => { scrollByCardOffset('right'); }} className="bg-white p-3 rounded-full shadow-lg">
+              <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6 text-primary" viewBox="0 0 20 20" fill="currentColor"><path fillRule="evenodd" d="M7.707 4.293a1 1 0 010 1.414L3.414 10l4.293 4.293a1 1 0 01-1.414 1.414l-5-5a1 1 0 010-1.414l5-5a1 1 0 011.414 0z" clipRule="evenodd"/></svg>
+            </button>
           </div>
         </div>
       </div>

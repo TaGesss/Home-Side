@@ -53,37 +53,47 @@ export default function Navbar() {
               Home
             </Link>
             <Link
-              href="/#about"
+              href="/about"
               className="text-white hover:text-orange-400 transition"
             >
               About
             </Link>
             <Link
-              href="/#products"
-              className="text-white hover:text-orange-400 transition"
-            >
-              Products
-            </Link>
-            <Link
-              href="/sample-contact"
-              className="text-white hover:text-orange-400 transition"
-            >
-              Request Sample
-            </Link>
-            <Link
-              href="/#services"
+              href="#services"
               className="text-white hover:text-orange-400 transition"
             >
               Services
             </Link>
+            <div className="relative group">
+              <button className="text-white hover:text-orange-400 transition flex items-center">
+                Products
+                <svg className="ml-1 w-4 h-4" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" /></svg>
+              </button>
+              <div className="absolute left-0 mt-2 w-48 bg-white rounded shadow-lg opacity-0 group-hover:opacity-100 transition pointer-events-none group-hover:pointer-events-auto z-10">
+                <Link href="/products/export" className="block px-4 py-2 text-gray-800 hover:bg-green-100">Export Products</Link>
+                <Link href="/products/import" className="block px-4 py-2 text-gray-800 hover:bg-green-100">Import Products</Link>
+              </div>
+            </div>
             <Link
-              href="/#customers"
+              href="/request-info"
               className="text-white hover:text-orange-400 transition"
             >
-              Customers
+              Request Info
             </Link>
             <Link
-              href="/#contact"
+              href="#why-us"
+              className="text-white hover:text-orange-400 transition"
+            >
+              Why Us
+            </Link>
+            <Link
+              href="#customers"
+              className="text-white hover:text-orange-400 transition"
+            >
+              Valued Customers
+            </Link>
+            <Link
+              href="#contact"
               className="text-white hover:text-orange-400 transition"
             >
               Contact
@@ -126,12 +136,14 @@ export default function Navbar() {
           <div className="py-4 space-y-3 border-t border-green-700">
             {[
               { href: "/", label: "Home" },
-              { href: "/#about", label: "About" },
-              { href: "/#products", label: "Products" },
-              { href: "/sample-contact", label: "Request Sample" },
-              { href: "/#services", label: "Services" },
-              { href: "/#customers", label: "Customers" },
-              { href: "/#contact", label: "Contact" },
+              { href: "/about", label: "About" },
+              { href: "#services", label: "Services" },
+              { href: "/products/export", label: "Export Products" },
+              { href: "/products/import", label: "Import Products" },
+              { href: "/request-info", label: "Request Info" },
+              { href: "#why-us", label: "Why Us" },
+              { href: "#customers", label: "Valued Customers" },
+              { href: "#contact", label: "Contact" },
             ].map((item) => (
               <Link
                 key={item.href}

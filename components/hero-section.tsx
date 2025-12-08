@@ -54,16 +54,40 @@ export default function HeroSection() {
           </p>
           <div className="flex space-x-4">
             <Link
-              href="#contact"
-              className="bg-primary text-white px-8 py-3 rounded-full hover:bg-orange-400 transition transform hover:scale-105 shadow-lg"
+              href="/products/import"
+              className="bg-primary text-white px-6 py-2 rounded-full hover:bg-orange-400 transition transform hover:scale-105 shadow-lg"
             >
-              Contact Us
+              Import
             </Link>
             <Link
-              href="#services"
-              className="border-2 border-primary text-primary-light px-8 py-3 rounded-full hover:bg-primary-hover transition transform hover:scale"
+              href="/products/export"
+              className="bg-primary text-white px-6 py-2 rounded-full hover:bg-orange-400 transition transform hover:scale-105 shadow-lg"
             >
-              Our Services
+              Export
+            </Link>
+            <Link
+              href="/services/machinery-rent"
+              className="bg-primary text-white px-6 py-2 rounded-full hover:bg-orange-400 transition transform hover:scale-105 shadow-lg"
+            >
+              Machinery Rental
+            </Link>
+            <Link
+              href="/services/transport"
+              className="bg-primary text-white px-6 py-2 rounded-full hover:bg-orange-400 transition transform hover:scale-105 shadow-lg"
+            >
+              Transport
+            </Link>
+            <Link
+              href="/services/customs-clearance"
+              className="bg-primary text-white px-6 py-2 rounded-full hover:bg-orange-400 transition transform hover:scale-105 shadow-lg"
+            >
+              Custom Clearance
+            </Link>
+            <Link
+              href="/services/construction-materials"
+              className="bg-primary text-white px-6 py-2 rounded-full hover:bg-orange-400 transition transform hover:scale-105 shadow-lg"
+            >
+              Construction Materials
             </Link>
           </div>
         </div>

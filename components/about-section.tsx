@@ -21,7 +21,7 @@ export default function AboutSection() {
 
       <div className="max-w-6xl mx-auto px-4 relative z-10">
         <h2 className="text-3xl font-bold text-center text-primary mb-16">
-          About Homeside Trading
+          Who We Are
         </h2>
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div className="relative">
@@ -41,6 +41,11 @@ export default function AboutSection() {
               to quality and customer satisfaction sets us apart in the
               industry.
             </p>
+              <div className="mt-8 flex justify-center">
+                <Link href="/about" className="bg-primary text-white px-6 py-2 rounded-full hover:bg-orange-400 transition shadow-lg">
+                  Learn More
+                </Link>
+              </div>
             <div className="space-y-4">
               <div className="flex items-start space-x-4">
                 <div className="bg-primary-hover p-2 rounded-full">
