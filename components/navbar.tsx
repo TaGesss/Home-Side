@@ -59,7 +59,7 @@ export default function Navbar() {
               About
             </Link>
             <Link
-              href="#services"
+              href="/#services"
               className="text-white hover:text-orange-400 transition"
             >
               Services
@@ -81,19 +81,19 @@ export default function Navbar() {
               Request Info
             </Link>
             <Link
-              href="#why-us"
+              href="/#why-us"
               className="text-white hover:text-orange-400 transition"
             >
               Why Us
             </Link>
             <Link
-              href="#customers"
+              href="/#customers"
               className="text-white hover:text-orange-400 transition"
             >
               Valued Customers
             </Link>
             <Link
-              href="#contact"
+              href="/#contact"
               className="text-white hover:text-orange-400 transition"
             >
               Contact
@@ -137,13 +137,13 @@ export default function Navbar() {
             {[
               { href: "/", label: "Home" },
               { href: "/about", label: "About" },
-              { href: "#services", label: "Services" },
+              { href: "/#services", label: "Services" },
               { href: "/products/export", label: "Export Products" },
               { href: "/products/import", label: "Import Products" },
               { href: "/request-info", label: "Request Info" },
-              { href: "#why-us", label: "Why Us" },
-              { href: "#customers", label: "Valued Customers" },
-              { href: "#contact", label: "Contact" },
+              { href: "/#why-us", label: "Why Us" },
+              { href: "/#customers", label: "Valued Customers" },
+              { href: "/#contact", label: "Contact" },
             ].map((item) => (
               <Link
                 key={item.href}

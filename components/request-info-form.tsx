@@ -31,12 +31,12 @@ export default function RequestInfoForm({ initialProduct = "" }) {
     other: "",
   });
 
-  function handleChange(e) {
+  function handleChange(e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) {
     const { name, value } = e.target;
     setForm((f) => ({ ...f, [name]: value }));
   }
 
-  function handleProductChange(idx, value) {
+  function handleProductChange(idx: number, value: string) {
     const products = [...form.products];
     products[idx] = value;
     setForm((f) => ({ ...f, products }));
@@ -46,11 +46,11 @@ export default function RequestInfoForm({ initialProduct = "" }) {
     setForm((f) => ({ ...f, products: [...f.products, ""] }));
   }
 
-  function removeProduct(idx) {
+  function removeProduct(idx: number) {
     setForm((f) => ({ ...f, products: f.products.filter((_, i) => i !== idx) }));
   }
 
-  function handleSubmit(e) {
+  function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
     // TODO: handle submission (API, email, etc.)
     alert("Request submitted! Thank you.");
