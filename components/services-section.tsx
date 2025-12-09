@@ -118,7 +118,7 @@ export default function ServicesSection() {
   return (
     <section
       id="services"
-      className="relative py-20 bg-gradient-to-r from-primary-hover to-cream-50 overflow-hidden"
+      className="relative py-20 bg-cream-50 overflow-hidden"
     >
       {/* Seed watermarks (client-only) */}
       <SeedWatermarksClient />

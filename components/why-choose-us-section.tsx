@@ -25,9 +25,11 @@ const cards = [
 
 export default function WhyChooseUsSection() {
   return (
-    <section id="why-us" className="py-20 bg-primary-light">
+    <section id="why-us" className="py-20 bg-cream-100">
       <div className="max-w-6xl mx-auto px-4">
-        <h2 className="text-3xl font-bold text-center text-primary mb-12">Why Choose Us</h2>
+        <h2 className="text-4xl md:text-5xl font-extrabold text-center text-primary drop-shadow-lg mb-14 tracking-tight">
+          Why Choose Us
+        </h2>
         <div className="grid md:grid-cols-4 gap-8">
           {cards.map((card, idx) => (
             <div key={idx} className="bg-white rounded-3xl shadow-xl p-8 flex flex-col items-center text-center">

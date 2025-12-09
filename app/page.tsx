@@ -15,9 +15,9 @@ export default function Home() {
       <ProductsSection />
       {/* Small banner below products section */}
       <ContactBanner size="small" showButton={true} />
-      <WhyChooseUsSection />
       <ServicesSection />
       <CustomersSection />
+       <WhyChooseUsSection />
       <ContactSection />
     </>
   )

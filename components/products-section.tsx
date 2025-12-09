@@ -139,9 +139,9 @@ export default function ProductsSection() {
 
         {/* Export Banner */}
         <div className="w-full mb-8">
-          <div className="bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-none p-2 md:p-3 text-center w-full">
-            <h3 className="text-2xl md:text-3xl font-semibold">Export</h3>
-            <p className="mt-2 text-sm md:text-base opacity-90">Explore products available for export — quality-checked and ready for international shipping.</p>
+          <div className="rounded-none p-2 md:p-3 text-center w-full">
+            <h3 className="text-2xl md:text-3xl font-semibold text-primary">Export</h3>
+            <p className="mt-2 text-sm md:text-base text-primary-light">Explore products available for export — quality-checked and ready for international shipping.</p>
           </div>
         </div>
 
@@ -157,20 +157,20 @@ export default function ProductsSection() {
             ref={containerRef}
             onMouseEnter={() => stopAutoScroll()}
             onMouseLeave={() => startAutoScroll()}
-            className="overflow-x-auto snap-x snap-mandatory flex gap-8 py-6 px-4 w-full"
+            className="overflow-x-auto snap-x snap-mandatory flex gap-6 py-4 px-2 w-full"
             style={{scrollBehavior: 'smooth'}}
           >
             {[...items, ...items].map((p, i) => (
-              <div key={p.title + '-' + i} className="snap-start flex-shrink-0 w-96 md:w-[28rem] bg-white rounded-3xl border border-gray-200 shadow-xl p-6 transition-all duration-300 hover:scale-105">
+              <div key={p.title + '-' + i} className="snap-start flex-shrink-0 w-72 md:w-80 bg-white rounded-2xl border border-gray-200 shadow-xl p-4 transition-all duration-300 hover:scale-105">
                 <div className="flex flex-col items-center">
-                  <div className="w-32 h-32 rounded-2xl overflow-hidden bg-white flex items-center justify-center border-2">
-                    <img src={p.img} alt={p.title} className="w-28 h-28 object-cover rounded-2xl" />
+                  <div className="w-24 h-24 rounded-xl overflow-hidden bg-white flex items-center justify-center border-2 shadow">
+                    <Image src={p.img} alt={p.title} width={96} height={96} className="w-20 h-20 object-cover rounded-xl" />
                   </div>
-                  <div className="mt-4 text-center">
-                    <p className="text-lg font-semibold text-primary">{p.title}</p>
-                    <p className="text-sm text-primary-light mt-2">{p.description}</p>
+                  <div className="mt-3 text-center">
+                    <p className="text-base font-semibold text-primary">{p.title}</p>
+                    <p className="text-sm text-primary-light mt-1">{p.description}</p>
                   </div>
-                  <Link href="/request-info?type=sample&product=" className="mt-4 block w-full text-center bg-orange-400 text-white py-2 rounded-full hover:bg-orange-500 transition font-medium">
+                  <Link href="/request-info?type=sample&product=" className="mt-3 block w-full text-center bg-orange-400 text-white py-2 rounded-full hover:bg-orange-500 transition font-medium">
                     Request Sample
                   </Link>
                 </div>
@@ -184,12 +184,15 @@ export default function ProductsSection() {
             </button>
           </div>
         </div>
+        <div className="mt-4 flex justify-center">
+          <Link href="/products/export" className="bg-primary text-white px-6 py-2 rounded-full hover:bg-orange-400 transition font-semibold shadow">Learn More</Link>
+        </div>
 
         {/* Import Banner */}
         <div className="w-full mt-12">
-          <div className="bg-gradient-to-r from-green-600 to-emerald-700 text-white rounded-none p-2 md:p-3 text-center w-full">
-            <h3 className="text-2xl md:text-3xl font-semibold">Import</h3>
-            <p className="mt-2 text-sm md:text-base opacity-90">Specializing in machinery, vehicles, and spare parts import with efficient customs clearance.</p>
+          <div className="rounded-none p-2 md:p-3 text-center w-full">
+            <h3 className="text-2xl md:text-3xl font-semibold text-primary">Import</h3>
+            <p className="mt-2 text-sm md:text-base text-primary-light">Specializing in machinery, vehicles, and spare parts import with efficient customs clearance.</p>
           </div>
         </div>
 
@@ -202,20 +205,20 @@ export default function ProductsSection() {
           </div>
 
           <div
-            className="overflow-x-auto snap-x snap-mandatory flex gap-8 py-6 px-4 w-full"
+            className="overflow-x-auto snap-x snap-mandatory flex gap-6 py-4 px-2 w-full"
             style={{scrollBehavior: 'smooth'}}
           >
             {[...items, ...items].map((p, i) => (
-              <div key={p.title + '-import-' + i} className="snap-start flex-shrink-0 w-96 md:w-[28rem] bg-white rounded-3xl border border-gray-200 shadow-xl p-6 transition-all duration-300 hover:scale-105">
+              <div key={p.title + '-import-' + i} className="snap-start flex-shrink-0 w-72 md:w-80 bg-white rounded-2xl border border-gray-200 shadow-xl p-4 transition-all duration-300 hover:scale-105">
                 <div className="flex flex-col items-center">
-                  <div className="w-32 h-32 rounded-2xl overflow-hidden bg-white flex items-center justify-center border-2">
-                    <img src={p.img} alt={p.title} className="w-28 h-28 object-cover rounded-2xl" />
+                  <div className="w-24 h-24 rounded-xl overflow-hidden bg-white flex items-center justify-center border-2 shadow">
+                    <Image src={p.img} alt={p.title} width={96} height={96} className="w-20 h-20 object-cover rounded-xl" />
                   </div>
-                  <div className="mt-4 text-center">
-                    <p className="text-lg font-semibold text-primary">{p.title}</p>
-                    <p className="text-sm text-primary-light mt-2">{p.description}</p>
+                  <div className="mt-3 text-center">
+                    <p className="text-base font-semibold text-primary">{p.title}</p>
+                    <p className="text-sm text-primary-light mt-1">{p.description}</p>
                   </div>
-                  <Link href="/request-info?type=sample&product=" className="mt-4 block w-full text-center bg-orange-400 text-white py-2 rounded-full hover:bg-orange-500 transition font-medium">
+                  <Link href="/request-info?type=sample&product=" className="mt-3 block w-full text-center bg-orange-400 text-white py-2 rounded-full hover:bg-orange-500 transition font-medium">
                     Request Sample
                   </Link>
                 </div>
@@ -228,6 +231,9 @@ export default function ProductsSection() {
               <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6 text-primary" viewBox="0 0 20 20" fill="currentColor"><path fillRule="evenodd" d="M7.707 4.293a1 1 0 010 1.414L3.414 10l4.293 4.293a1 1 0 01-1.414 1.414l-5-5a1 1 0 010-1.414l5-5a1 1 0 011.414 0z" clipRule="evenodd"/></svg>
             </button>
           </div>
+        </div>
+        <div className="mt-4 flex justify-center">
+          <Link href="/products/import" className="bg-primary text-white px-6 py-2 rounded-full hover:bg-orange-400 transition font-semibold shadow">Learn More</Link>
         </div>
       </div>
     </section>

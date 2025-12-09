@@ -3,7 +3,7 @@ import Link from "next/link";
 export default function Footer() {
   return (
     <footer className="bg-primary text-white py-12">
-      <div className="max-w-6xl mx-auto px-4 grid md:grid-cols-4 gap-8">
+      <div className="max-w-6xl mx-auto px-4 grid md:grid-cols-5 gap-8">
         <div>
           <h3 className="text-xl font-bold mb-4">
             HOMESIDE <span className="text-orange-400">TRADING</span>
@@ -49,6 +49,27 @@ export default function Footer() {
             </li>
           </ul>
         </div>
+        <div>
+                  <h4 className="font-bold mb-4">Products</h4>
+                  <ul className="space-y-2">
+                    <li>
+                      <Link
+                        href="/products/import"
+                        className="text-white-200 hover:text-orange-400 transition"
+                      >
+                        Import
+                      </Link>
+                    </li>
+                    <li>
+                      <Link
+                        href="/products/export"
+                        className="text-white-200 hover:text-orange-400 transition"
+                      >
+                        Export
+                      </Link>
+                    </li>
+                  </ul>
+                </div>
         <div>
           <h4 className="font-bold mb-4">Services</h4>
           <ul className="space-y-2">

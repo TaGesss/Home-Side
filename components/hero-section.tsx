@@ -22,7 +22,7 @@ export default function HeroSection() {
     rotation: Math.random() * 360, // Random rotation for variety
   }));
   return (
-    <section className="relative flex items-center justify-center px-4 pt-12 pb-10 bg-gradient-to-r from-primary-hover to-cream-50 overflow-hidden">
+    <section className="relative flex items-center justify-center px-4 pt-20 pb-20 min-h-[80vh] bg-gradient-to-r from-primary-hover to-cream-50 overflow-hidden">
       {seedPositions.map((pos, index) => (
         <div
           key={index}
@@ -44,48 +44,46 @@ export default function HeroSection() {
 
       <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
         <div className="space-y-6">
-          <h1 className="text-6xl md:text-7xl font-bold text-primary leading-tight">
-            Your Trusted Partner in
-            <span className="text-orange-400"> Global Trade</span>
+          <h1 className="text-6xl md:text-7xl font-bold  leading-tight text-orange-600">
+            Unlock Global Opportunities
           </h1>
           <p className="text-xl text-primary-light">
-            Specializing in import, export, machinery rental, and transport
-            services with many years of industry experience.
+            Experience, reliability, speed, and excellence in every transaction. Partner with us to grow your business worldwide.
           </p>
-          <div className="flex space-x-4">
+          <div className="flex flex-wrap gap-4 mt-6">
             <Link
               href="/products/import"
-              className="bg-primary text-white px-6 py-2 rounded-full hover:bg-orange-400 transition transform hover:scale-105 shadow-lg"
+              className="bg-primary/80 text-white px-7 py-3 rounded-full hover:bg-orange-400 hover:text-white transition font-semibold shadow-lg"
             >
               Import
             </Link>
             <Link
               href="/products/export"
-              className="bg-primary text-white px-6 py-2 rounded-full hover:bg-orange-400 transition transform hover:scale-105 shadow-lg"
+              className="bg-primary/80 text-white px-7 py-3 rounded-full hover:bg-orange-400 hover:text-white transition font-semibold shadow-lg"
             >
               Export
             </Link>
             <Link
               href="/services/machinery-rent"
-              className="bg-primary text-white px-6 py-2 rounded-full hover:bg-orange-400 transition transform hover:scale-105 shadow-lg"
+              className="bg-primary/80 text-white px-7 py-3 rounded-full hover:bg-orange-400 hover:text-white transition font-semibold shadow-lg"
             >
               Machinery Rental
             </Link>
             <Link
               href="/services/transport"
-              className="bg-primary text-white px-6 py-2 rounded-full hover:bg-orange-400 transition transform hover:scale-105 shadow-lg"
+              className="bg-primary/80 text-white px-7 py-3 rounded-full hover:bg-orange-400 hover:text-white transition font-semibold shadow-lg"
             >
               Transport
             </Link>
             <Link
               href="/services/customs-clearance"
-              className="bg-primary text-white px-6 py-2 rounded-full hover:bg-orange-400 transition transform hover:scale-105 shadow-lg"
+              className="bg-primary/80 text-white px-7 py-3 rounded-full hover:bg-orange-400 hover:text-white transition font-semibold shadow-lg"
             >
               Custom Clearance
             </Link>
             <Link
               href="/services/construction-materials"
-              className="bg-primary text-white px-6 py-2 rounded-full hover:bg-orange-400 transition transform hover:scale-105 shadow-lg"
+              className="bg-primary/80 text-white px-7 py-3 rounded-full hover:bg-orange-400 hover:text-white transition font-semibold shadow-lg"
             >
               Construction Materials
             </Link>

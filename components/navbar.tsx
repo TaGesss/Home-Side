@@ -1,11 +1,13 @@
 "use client";
 import Link from "next/link";
 import Image from "next/image";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 
 export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [productsOpen, setProductsOpen] = useState(false);
+  const productsRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -14,6 +16,21 @@ export default function Navbar() {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
+  // Close Products dropdown on outside click or nav interaction
+  useEffect(() => {
+    function handleClick(e: MouseEvent) {
+      if (productsRef.current && !productsRef.current.contains(e.target as Node)) {
+        setProductsOpen(false);
+      }
+    }
+    if (productsOpen) {
+      document.addEventListener("mousedown", handleClick);
+    } else {
+      document.removeEventListener("mousedown", handleClick);
+    }
+    return () => document.removeEventListener("mousedown", handleClick);
+  }, [productsOpen]);
 
   return (
     <nav
@@ -49,52 +66,67 @@ export default function Navbar() {
             <Link
               href="/"
               className="text-white hover:text-orange-400 transition"
+              onClick={() => setProductsOpen(false)}
             >
               Home
             </Link>
             <Link
               href="/about"
               className="text-white hover:text-orange-400 transition"
+              onClick={() => setProductsOpen(false)}
             >
               About
             </Link>
             <Link
               href="/#services"
               className="text-white hover:text-orange-400 transition"
+              onClick={() => setProductsOpen(false)}
             >
               Services
             </Link>
-            <div className="relative group">
-              <button className="text-white hover:text-orange-400 transition flex items-center">
+            <div className="relative" ref={productsRef}>
+              <button
+                className={`text-white hover:text-orange-400 transition flex items-center ${productsOpen ? "text-orange-400" : ""}`}
+                onClick={e => {
+                  e.stopPropagation();
+                  setProductsOpen(v => !v);
+                }}
+              >
                 Products
                 <svg className="ml-1 w-4 h-4" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" /></svg>
               </button>
-              <div className="absolute left-0 mt-2 w-48 bg-white rounded shadow-lg opacity-0 group-hover:opacity-100 transition pointer-events-none group-hover:pointer-events-auto z-10">
-                <Link href="/products/export" className="block px-4 py-2 text-gray-800 hover:bg-green-100">Export Products</Link>
-                <Link href="/products/import" className="block px-4 py-2 text-gray-800 hover:bg-green-100">Import Products</Link>
-              </div>
+              {productsOpen && (
+                <div className="absolute left-0 mt-2 w-48 bg-white rounded shadow-lg z-10">
+                  <Link href="/products/export" className="block px-4 py-2 text-gray-800 hover:bg-green-100" onClick={() => setProductsOpen(false)}>Export Products</Link>
+                  <Link href="/products/import" className="block px-4 py-2 text-gray-800 hover:bg-green-100" onClick={() => setProductsOpen(false)}>Import Products</Link>
+                </div>
+              )}
             </div>
             <Link
               href="/request-info"
               className="text-white hover:text-orange-400 transition"
+              onClick={() => setProductsOpen(false)}
             >
               Request Info
             </Link>
             <Link
               href="/#why-us"
               className="text-white hover:text-orange-400 transition"
+              onClick={() => setProductsOpen(false)}
             >
               Why Us
             </Link>
             <Link
               href="/#customers"
               className="text-white hover:text-orange-400 transition"
+              onClick={() => setProductsOpen(false)}
             >
               Valued Customers
             </Link>
             <Link
               href="/#contact"
               className="text-white hover:text-orange-400 transition"
+              onClick={() => setProductsOpen(false)}
             >
               Contact
             </Link>

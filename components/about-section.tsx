@@ -41,11 +41,6 @@ export default function AboutSection() {
               to quality and customer satisfaction sets us apart in the
               industry.
             </p>
-              <div className="mt-8 flex justify-center">
-                <Link href="/about" className="bg-primary text-white px-6 py-2 rounded-full hover:bg-orange-400 transition shadow-lg">
-                  Learn More
-                </Link>
-              </div>
             <div className="space-y-4">
               <div className="flex items-start space-x-4">
                 <div className="bg-primary-hover p-2 rounded-full">
@@ -121,6 +116,11 @@ export default function AboutSection() {
                   <p className="text-primary-light">
                     Recognized for excellence
                   </p>
+                  <div className="mt-6 flex justify-center">
+                    <Link href="/about" className="bg-primary text-white px-6 py-2 rounded-full hover:bg-orange-400 transition shadow-lg">
+                      Learn More
+                    </Link>
+                  </div>
                 </div>
               </div>
             </div>
