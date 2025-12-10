@@ -1,6 +1,7 @@
 "use client";
 import { useState } from "react";
 import { exportProducts, importProducts } from "@/lib/products";
+import emailjs from "@emailjs/browser";
 
 const requestTypes = [
   "Sample request",
@@ -30,6 +31,10 @@ function RequestInfoForm({ initialProduct }: { initialProduct?: string }) {
     requestType: "Sample request",
     products: initialProduct ? [initialProduct] : [""],
     other: "",
+    customClearanceType: "",
+    transportType: "",
+    machineryType: "",
+    constructionType: "",
   });
   const [submitted, setSubmitted] = useState(false);
 
@@ -48,9 +53,37 @@ function RequestInfoForm({ initialProduct }: { initialProduct?: string }) {
   function removeProduct(idx: number) {
     setForm((f) => ({ ...f, products: f.products.filter((_, i) => i !== idx) }));
   }
-  function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
+  async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
-    setSubmitted(true);
+    try {
+      // Replace these with your actual EmailJS credentials
+      const serviceId = "service_afeec4p";
+      const templateId = "template_9bxb7ru";
+      const publicKey = "Z6VC6ev8ow2O6EiCj";
+
+      await emailjs.send(serviceId, templateId, {
+        name: form.name,
+        organization: form.organization,
+        email: form.email,
+        phone: form.phone,
+        country: form.country,
+        state: form.state,
+        city: form.city,
+        message: form.message,
+        requestType: form.requestType,
+        products: form.products.join(", "),
+        other: form.other,
+        customClearanceType: form.customClearanceType,
+        transportType: form.transportType,
+        machineryType: form.machineryType,
+        constructionType: form.constructionType,
+        date: new Date().toLocaleString(),
+      }, publicKey);
+
+      setSubmitted(true);
+    } catch (err) {
+      alert("Failed to send your request. Please try again later.");
+    }
   }
 
   function renderTypeFields() {
