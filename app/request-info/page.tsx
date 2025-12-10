@@ -20,6 +20,7 @@ export default function RequestInfoPage({ searchParams }: { searchParams?: { pro
               </ul>
               <div className="mt-4 text-sm text-primary-light">
                 <p className="mb-1"><strong>Office:</strong> Addis Ababa, Ethiopia</p>
+                <p><strong>Phone:</strong> +251911208341</p>
                 <p><strong>Email:</strong> info@homesidetrading.com</p>
               </div>
             </div>

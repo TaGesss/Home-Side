@@ -67,7 +67,7 @@ export default function CustomersSection() {
       image: "/images/Habesha Steel PLC.png",
       category: "Customs clearance and transit services",
       categoryDescription:
-        "Major construction companies and building contractors",
+        "",
       similarCustomers: [
         "Ferranti Trading PLC",
         "Apex Trading PLC",
@@ -108,7 +108,7 @@ export default function CustomersSection() {
       image: "/images/sinotruk.png",
       category: "Import from Various Companies",
       categoryDescription: "",
-      similarCustomers: [
+     similarCustomers:[
         "DINGEMANSE Trucks and Trailers",
         "HAS Trailer SAN.VE TIC.LTD.STL",
       ],

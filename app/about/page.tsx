@@ -3,28 +3,23 @@ import Link from "next/link";
 
 const team = [
   {
-    name: "Tarik G.",
-    role: "Chief Executive Officer",
-    img: "/images/team1.jpg",
-    bio: "Visionary leader with 15+ years in international trade, driving Homeside's growth and global partnerships."
+    name: "Dawit Gessesse",
+    role: "Owner and CEO",
+    img: "/images/Dawit Gessesse.jpg"
   },
   {
-    name: "Sara M.",
+    name: "Asmamaw Wale",
     role: "Operations Manager",
-    img: "/images/team2.jpg",
-    bio: "Expert in logistics and process optimization, ensuring seamless operations and client satisfaction."
+      img: "/images/Asmamaw Wale.jpg"},
+  {
+    name: "Sisay Wolde",
+    role: "Export Manager",
+    img: "/images/Sisay Wolde.jpg"
   },
   {
-    name: "Abel T.",
-    role: "Trade Specialist",
-    img: "/images/team3.jpg",
-    bio: "Specialist in import/export compliance and market research, connecting clients to new opportunities."
-  },
-  {
-    name: "Lily A.",
-    role: "Customer Relations",
-    img: "/images/team4.jpg",
-    bio: "Dedicated to building strong client relationships and delivering exceptional service."
+    name: "Tariku Gessesse",
+    role: "IT Manager",
+    img: "/images/Tariku Gessesse.jpg" 
   },
 ];
 
@@ -39,10 +34,10 @@ export default function AboutPage() {
           </div>
           <div className="md:w-1/2">
             <h2 className="text-3xl font-bold text-primary mb-4">Who We Are</h2>
-            <p className="text-lg text-primary-light mb-4 leading-relaxed">
-              Homeside Trading PLC is a premier provider of international trade and logistics solutions, headquartered in Addis Ababa, Ethiopia. With a proven track record in import, export, machinery rental, and transport, we empower businesses to reach new markets and achieve operational excellence. Our team combines deep industry expertise with a passion for innovation, ensuring every client receives tailored, reliable, and cost-effective services.
+            <p className="text-lg text-primary-light mb-4 leading-relaxed text-justify">
+              Homeside Trading PLC is a provider of international trade and logistics solutions, headquartered in Addis Ababa, Ethiopia. With a track record in import, export, machinery rental, and transport, we empower businesses to reach new markets and achieve operational excellence. Our team combines deep industry expertise with a passion for innovation, ensuring every client receives tailored, reliable, and cost-effective services.
             </p>
-            <p className="text-primary-light mb-2">
+            <p className="text-lg text-primary-light mb-4 leading-relaxed text-justify">
               We believe in building lasting partnerships based on trust, transparency, and mutual growth. Our commitment to quality and customer satisfaction is at the heart of everything we do.
             </p>
           </div>
@@ -76,7 +71,6 @@ export default function AboutPage() {
                 <Image src={member.img} alt={member.name} width={110} height={110} className="rounded-full mb-4 object-cover border-4 border-orange-100 shadow" />
                 <h4 className="text-lg font-bold text-primary mb-1">{member.name}</h4>
                 <p className="text-primary-light mb-2">{member.role}</p>
-                <p className="text-sm text-gray-500 text-center">{member.bio}</p>
               </div>
             ))}
           </div>

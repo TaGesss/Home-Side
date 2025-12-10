@@ -151,14 +151,9 @@ export default function ContactSection() {
               <div>
                 <h4 className="font-bold">Our Location</h4>
                 <p>
-                  <a
-                    href="https://maps.app.goo.gl/6Qw6Qw6Qw6Qw6Qw6A"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="underline hover:text-orange-300"
-                  >
-                    Find us on Google Maps
-                  </a>
+                
+                    Gerji - BMA Plaza, Addis Ababa, Ethiopia
+                
                 </p>
               </div>
             </div>
@@ -224,16 +219,15 @@ export default function ContactSection() {
             </div>
 
             <div className="pt-6 rounded-xl overflow-hidden h-96">
-              <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3952.9999999999995!2d38.763611!3d9.010793!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x164b853b6b6b6b6b%3A0x6b6b6b6b6b6b6b6b!2sBole%2C%20Addis%20Ababa!5e0!3m2!1sen!2set!4v1680000000000!5m2!1sen!2set"
-                width="100%"
-                height="100%"
-                style={{ border: 0, minHeight: '350px' }}
-                allowFullScreen
-                loading="lazy"
-                referrerPolicy="no-referrer-when-downgrade"
-              ></iframe>
-            </div>
+  <iframe
+    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d246.2930689491796!2d38.80276249914399!3d9.000728202415097!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x164b8500444fad5b%3A0x7f62f36a8efad200!2sBMA%20PLAZA!5e0!3m2!1sen!2set!4v1765396709105!5m2!1sen!2set"
+    className="w-full h-full border-0"
+    allowFullScreen
+    loading="lazy"
+    referrerPolicy="no-referrer-when-downgrade"
+  ></iframe>
+</div>
+
           </div>
 
           {/* Contact Form */}

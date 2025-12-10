@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
+import { exportProducts } from "@/lib/products";
 
 const exportCategories = [
   {
@@ -80,28 +81,32 @@ const exportCategories = [
 
 export default function ExportProductsPage() {
   return (
-    <main className="py-20 bg-cream-50 min-h-screen">
-      <div className="max-w-6xl mx-auto px-4">
-        <h1 className="text-4xl font-bold text-primary mb-8 text-center">Export Products</h1>
-        {exportCategories.map((cat, idx) => (
-          <section key={idx} className="mb-12">
-            <h2 className="text-2xl font-semibold text-primary mb-6">{cat.name}</h2>
-            <div className="grid md:grid-cols-3 gap-8">
-              {cat.products.map((prod, i) => (
-                <div key={i} className="bg-white rounded-2xl shadow-lg p-6 flex flex-col items-center">
-                  <Image src={prod.img} alt={prod.title} width={160} height={120} className="rounded-xl mb-4 object-cover" />
-                  <h3 className="text-lg font-bold text-primary mb-2">{prod.title}</h3>
-                  <p className="text-primary-light mb-2">{prod.description}</p>
-                  <p className="text-sm text-primary mb-1"><strong>Specs:</strong> {prod.specs}</p>
-                  <p className="text-sm text-primary mb-4"><strong>Packaging:</strong> {prod.packaging}</p>
-                  <Link href="/request-info?type=sample&product=" className="mt-auto bg-orange-400 text-white px-6 py-2 rounded-full hover:bg-orange-500 transition font-medium">
-                    Request Sample
-                  </Link>
+    <main className="py-12">
+      <div className="max-w-7xl mx-auto px-6">
+        <h1 className="text-3xl font-bold text-primary mb-4">Export Products</h1>
+        <p className="text-primary-light mb-8">Explore our export product catalog. Click a product to request a sample or get a quote.</p>
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+          {exportProducts.map((p) => (
+            <article key={p.title} className="bg-white rounded-lg border border-gray-200 shadow-sm p-6 flex flex-col">
+              <div className="flex items-center gap-4">
+                <div className="w-32 h-32 rounded-full overflow-hidden border-2 bg-white flex items-center justify-center">
+                  <Image src={p.img || "/images/placeholder.jpg"} alt={p.title} width={128} height={128} className="w-28 h-28 object-cover rounded-full" />
                 </div>
-              ))}
-            </div>
-          </section>
-        ))}
+                <div>
+                  <h3 className="font-semibold text-lg">{p.title}</h3>
+                  <p className="text-sm text-primary-light mt-1">{p.subtitle ?? ""}</p>
+                </div>
+              </div>
+              {p.description && (
+                <p className="text-sm text-primary-light mt-4 flex-1">{p.description}</p>
+              )}
+              <div className="mt-4 flex items-center justify-between">
+                <Link href={`/request-info?product=${encodeURIComponent(p.title)}`} className="inline-flex items-center gap-2 px-4 py-2 bg-orange-500 text-white rounded-md shadow">Request Sample</Link>
+                <Link href="#" className="text-sm text-primary-light underline">More details</Link>
+              </div>
+            </article>
+          ))}
+        </div>
       </div>
     </main>
   );

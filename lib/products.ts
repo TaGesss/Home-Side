@@ -1,4 +1,5 @@
 
+
 export type Product = {
   title: string;
   href: string;
@@ -8,33 +9,74 @@ export type Product = {
 };
 
 export const exportProducts: Product[] = [
-  { title: "Wollega Sesame Seed", href: "#", img: "https://via.placeholder.com/200x200.png?text=Wollega+Sesame+Seed" },
-  { title: "Whitish Humera", href: "#", img: "https://via.placeholder.com/200x200.png?text=Whitish+Humera" },
-  { title: "Reddish Sesame seed", href: "#", img: "https://via.placeholder.com/200x200.png?text=Reddish+Sesame+seed" },
-  { title: "Niger Seed", href: "#", img: "https://via.placeholder.com/200x200.png?text=Niger+Seed" },
-  { title: "Linseed/flaxseed", href: "#", img: "https://via.placeholder.com/200x200.png?text=Linseed%2Fflaxseed" },
-  { title: "Soy Bean", href: "#", img: "https://via.placeholder.com/200x200.png?text=Soy+Bean" },
-  { title: "Peanut", href: "#", img: "https://via.placeholder.com/200x200.png?text=Peanut" },
-  { title: "Red Kidney Bean", href: "#", img: "https://via.placeholder.com/200x200.png?text=Red+Kidney+Bean" },
-  { title: "White Pea", href: "#", img: "https://via.placeholder.com/200x200.png?text=White+Pea" },
-  { title: "Green Mung Bean", href: "#", img: "https://via.placeholder.com/200x200.png?text=Green+Mung+Bean" },
-  { title: "Kabuli Chickpea", href: "#", img: "https://via.placeholder.com/200x200.png?text=Kabuli+Chickpea" },
-  { title: "Desi ChickPea", href: "#", img: "https://via.placeholder.com/200x200.png?text=Desi+ChickPea" },
-  { title: "Pinto Beans", href: "#", img: "https://via.placeholder.com/200x200.png?text=Pinto+Beans" },
-  { title: "Large Light Brown Kidney Peas", href: "#", img: "https://via.placeholder.com/200x200.png?text=Large+Light+Brown+Kidney+Peas" },
-  { title: "Pigeon Bean", href: "#", img: "https://via.placeholder.com/200x200.png?text=Pigeon+Bean" },
-  { title: "Lupin", href: "#", img: "https://via.placeholder.com/200x200.png?text=Lupin" },
-  { title: "Red Speckled Bean", href: "#", img: "https://via.placeholder.com/200x200.png?text=Red+Speckled+Bean" },
-  { title: "Black Cumin", href: "#", img: "https://via.placeholder.com/200x200.png?text=Black+Cumin" },
-  { title: "Turmeric Finger", href: "#", img: "https://via.placeholder.com/200x200.png?text=Turmeric+Finger" },
-  { title: "Long Pepper", href: "#", img: "https://via.placeholder.com/200x200.png?text=Long+Pepper" },
+  // 1. Coffee and Tea
+  { title: "Arabica (Sidamo, Yirgacheffe, Harar)", href: "#", img: "/images/Arebica Coffee.jpg", subtitle: "Coffee and Tea" },
+  { title: "Specialty Coffee", href: "#", img: "/images/Speciality Coffee.webp", subtitle: "Coffee and Tea" },
+  { title: "Tea Leaves", href: "#", img: "/images/Tea leaves.jpg", subtitle: "Coffee and Tea" },
+
+  // 2. Oilseeds
+  { title: "Wollega Sesame Seed", href: "#", img: "/images/Wollega Sesame Seed.jpg", subtitle: "Sesame seeds" },
+  { title: "Whitish Humera", href: "#", img: "/images/Whitish Humera.jpg", subtitle: "Sesame seeds" },
+  { title: "Reddish Humera", href: "#", img: "/images/Reddish Humera.jpg", subtitle: "Sesame seeds" },
+  { title: "Niger seed", href: "#", img: "/images/Niger seed.jpg", subtitle: "Oilseeds" },
+  { title: "Sunflower seeds", href: "#", img: "/images/Sunflower seeds.jpg", subtitle: "Oilseeds" },
+  { title: "Soybean", href: "#", img: "/images/Soybean.webp", subtitle: "Oilseeds" },
+  { title: "Linseed / Flaxseed", href: "#", img: "/images/Linseed - Flaxseed.jpg", subtitle: "Oilseeds" },
+  { title: "Peanut", href: "#", img: "/images/Peanut.jpg", subtitle: "Oilseeds" },
+
+  // 3. Pulses and Legumes
+  { title: "Kabuli Chickpea", href: "#", img: "/images/Kabuli Chickpea.jpg", subtitle: "Chickpeas" },
+  { title: "Desi Chickpea", href: "#", img: "/images/Desi Chickpea.jpg", subtitle: "Chickpeas" },
+  { title: "Lentils", href: "#", img: "/images/Lentils.jpg", subtitle: "Pulses and Legumes" },
+  { title: "Faba beans (broad beans)", href: "#", img: "/images/Faba beans (broad beans).jpg", subtitle: "Pulses and Legumes" },
+  { title: "Redy kidney bean", href: "#", img: "/images/Redy kidney bean.jpg", subtitle: "Haricot beans" },
+  { title: "Pinto beans", href: "#", img: "/images/Pinto beans.jpg", subtitle: "Haricot beans" },
+  { title: "Red speckled bean", href: "#", img: "/images/Red speckled bean.jpg", subtitle: "Haricot beans" },
+  { title: "Large light brown kidney peas", href: "#", img: "/images/Large light brown kidney peas.jpg", subtitle: "Haricot beans" },
+  { title: "White pea", href: "#", img: "/images/White pea.jpg", subtitle: "Pulses and Legumes" },
+  { title: "Green mung bean", href: "#", img: "/images/Green mung bean.jpg", subtitle: "Pulses and Legumes" },
+  { title: "Pigeon bean", href: "#", img: "/images/Pigeon bean.jpg", subtitle: "Pulses and Legumes" },
+  { title: "Lupin", href: "#", img: "/images/Lupin.jpg", subtitle: "Pulses and Legumes" },
+
+  // 4. Spices and Herbs
+  { title: "Cardamom", href: "#", img: "/images/Cardamom.jpg", subtitle: "Spices and Herbs" },
+  { title: "Ginger", href: "#", img: "/images/Ginger.jpg", subtitle: "Spices and Herbs" },
+  { title: "Turmeric finger", href: "#", img: "/images/Turmeric finger.jpg", subtitle: "Spices and Herbs" },
+  { title: "Long pepper", href: "#", img: "/images/Long pepper.jpg", subtitle: "Spices and Herbs" },
+  { title: "Black cumin", href: "#", img: "/images/Black cumin.jpg", subtitle: "Spices and Herbs" },
+
+  // 5. Cereals
+  { title: "Teff (used for injera)", href: "#", img: "/images/Teff.jpg", subtitle: "Cereals" },
+  { title: "Barley", href: "#", img: "/images/Barley.jpg", subtitle: "Cereals" },
 ];
 
 export const importProducts: Product[] = [
-  { title: "Machinery", href: "/products/import#machinery", img: "https://via.placeholder.com/200x200.png?text=Machinery", description: "Industrial and agricultural machinery for all needs." },
-  { title: "Vehicles", href: "/products/import#vehicles", img: "https://via.placeholder.com/200x200.png?text=Vehicles", description: "Commercial and private vehicles for import." },
-  { title: "Spare Parts", href: "/products/import#spare-parts", img: "https://via.placeholder.com/200x200.png?text=Spare+Parts", description: "Genuine spare parts for machinery and vehicles." },
-  { title: "Construction Equipment", href: "/products/import#construction-equipment", img: "https://via.placeholder.com/200x200.png?text=Construction+Equipment", description: "Heavy-duty construction equipment for all projects." },
-  { title: "Regulatory Equipment", href: "/products/import#regulatory-equipment", img: "https://via.placeholder.com/200x200.png?text=Regulatory+Equipment", description: "Certified regulatory and safety equipment." },
-  { title: "Decor of Car", href: "/products/import#decor-of-car", img: "https://via.placeholder.com/200x200.png?text=Decor+of+Car", description: "Car decor and accessories for all models." },
+  // 1. Vehicles
+  { title: "Passenger Vehicles", href: "#", img: "/images/Passenger Vehicles.jpg", subtitle: "Vehicles" },
+  { title: "Commercial Vehicles", href: "#", img: "/images/Commercial Vehicles.jpg", subtitle: "Vehicles" },
+  { title: "Special Purpose Vehicles", href: "#", img: "/images/Special Purpose Vehicles.webp", subtitle: "Vehicles" },
+
+  // 2. Spare Parts
+  { title: "Engine & Powertrain Parts", href: "#", img: "/images/Engine & Powertrain Parts.webp", subtitle: "Spare Parts" },
+  { title: "Electrical & Electronics", href: "#", img: "/images/Electrical & Electronics.webp", subtitle: "Spare Parts" },
+  { title: "Suspension & Brake Parts", href: "#", img: "/images/Suspension & Brake Parts.webp", subtitle: "Spare Parts" },
+  { title: "Body Parts", href: "#", img: "/images/Body Parts.jpg", subtitle: "Spare Parts" },
+  { title: "Tires & Wheels", href: "#", img: "/images/Tires & Wheels.jpg", subtitle: "Spare Parts" },
+
+  // 3. Construction Equipment
+  { title: "Earthmoving Equipment", href: "#", img: "/images/Earthmoving Equipment.webp", subtitle: "Construction Equipment" },
+  { title: "Material Handling Equipment", href: "#", img: "/images/Material Handling Equipment.jpg", subtitle: "Construction Equipment" },
+  { title: "Concrete Equipment", href: "#", img: "/images/Concrete Equipment.jpg", subtitle: "Construction Equipment" },
+  { title: "Generators & Power Equipment", href: "#", img: "/images/Generators & Power Equipment.jpg", subtitle: "Construction Equipment" },
+
+  // 4. Regulatory Equipment
+  { title: "Safety & Compliance Equipment", href: "#", img: "/images/Safety & Compliance Equipment.png", subtitle: "Regulatory Equipment" },
+  { title: "Inspection & Diagnostic Equipment", href: "#", img: "/images/Inspection & Diagnostic Equipment.png", subtitle: "Regulatory Equipment" },
+  { title: "Traffic & Road Regulatory Items", href: "#", img: "/images/Traffic & Road Regulatory Items.jpg", subtitle: "Regulatory Equipment" },
+
+  // 5. Car Decor & Accessories
+  { title: "Interior Accessories", href: "#", img: "/images/Interior Accessories.jpg", subtitle: "Car Decor & Accessories" },
+  { title: "Exterior Accessories", href: "#", img: "/images/Exterior Accessories.webp", subtitle: "Car Decor & Accessories" },
+  { title: "Lighting & Style", href: "#", img: "/images/Lighting & Style.jpg", subtitle: "Car Decor & Accessories" },
+  { title: "Digital & Comfort Enhancements", href: "#", img: "/images/Digital & Comfort Enhancements.webp", subtitle: "Car Decor & Accessories" },
 ];

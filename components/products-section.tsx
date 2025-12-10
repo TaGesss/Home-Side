@@ -92,29 +92,34 @@ export default function ProductsSection() {
                   className="product-card flex-shrink-0 w-[75%] sm:w-[45%] md:w-1/4 bg-white/30 backdrop-blur-md rounded-2xl border border-gray-200 shadow-xl hover:scale-105 transition-transform duration-300 snap-start p-4"
                 >
                   <div className="flex flex-col items-center">
-                    <div className="w-20 h-20 rounded-xl overflow-hidden bg-white flex items-center justify-center border border-gray-200 shadow-sm mb-3">
+                    <div className="w-48 h-48 rounded-xl overflow-hidden bg-white flex items-center justify-center border border-gray-200 shadow-sm mb-3">
                       <Image
                         src={p.img || "/images/placeholder.jpg"}
                         alt={p.title}
-                        width={80}
-                        height={80}
-                        className="w-20 h-20 object-cover rounded-xl"
+                        width={192}
+                        height={192}
+                        className="w-44 h-44 object-cover rounded-xl"
                       />
                     </div>
                     <p className="font-semibold text-base md:text-lg text-primary text-center">
                       {p.title}
                     </p>
-                    <p className="text-xs md:text-sm text-primary-light text-center mt-1">
-                      {p.description}
-                    </p>
+                    {p.description && (
+                      <p className="text-xs md:text-sm text-primary-light text-center mt-1">
+                        {p.description}
+                      </p>
+                    )}
 
-                    {/* Request Sample Button */}
-                    <Link
-                      href="/request-info?type=sample&product="
-                      className="mt-3 block w-full text-center bg-orange-400 text-white py-2 rounded-full hover:bg-orange-500 transition font-medium"
-                    >
-                      Request Sample
-                    </Link>
+                    {/* Action Button: Export = Sample Request, Import = Check Availability */}
+                    {section === "Export" ? (
+                      <Link href={`/request-info?type=sample&product=${encodeURIComponent(p.title)}`} className="mt-3 block w-full text-center bg-orange-400 text-white py-2 rounded-full hover:bg-orange-500 transition font-medium">
+                        Sample Request
+                      </Link>
+                    ) : (
+                      <Link href={`/request-info?type=availability&product=${encodeURIComponent(p.title)}`} className="mt-3 block w-full text-center bg-orange-400 text-white py-2 rounded-full hover:bg-orange-500 transition font-medium">
+                        Check Availability
+                      </Link>
+                    )}
                   </div>
                 </div>
               ))}
