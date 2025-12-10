@@ -12,17 +12,48 @@ export default function HeroSection() {
     "text-orange-500",
   ];
 
-  // Generate positions for seed watermarks - same quantity and size as sunflower watermarks
-  const seedPositions = Array.from({ length: 50 }, (_, i) => ({
+  const seedPositions = Array.from({ length: 50 }, () => ({
     top: `${Math.random() * 100}%`,
     left: `${Math.random() * 100}%`,
-    size: 16 + Math.random() * 20, // 16px to 36px (same as sunflowers)
-    opacity: 0.08 + Math.random() * 0.07, // 0.08 to 0.15 opacity
+    size: 16 + Math.random() * 20,
+    opacity: 0.08 + Math.random() * 0.07,
     color: watermarkColors[Math.floor(Math.random() * watermarkColors.length)],
-    rotation: Math.random() * 360, // Random rotation for variety
+    rotation: Math.random() * 360,
   }));
+
+  const navButtons = [
+    { label: "Import", href: "/products/import" },
+    { label: "Export", href: "/products/export" },
+    { label: "Machinery Rental", href: "/services/machinery-rent" },
+    { label: "Transport", href: "/services/transport" },
+    { label: "Custom Clearance", href: "/services/customs-clearance" },
+    { label: "Construction Materials", href: "/services/construction-materials" },
+  ];
+
+  const buttonClasses = `
+    bg-primary-hover 
+    text-primary-light text-xl 
+    px-7 py-3 
+    rounded-full 
+    border border-white/20 
+    font-semibold 
+    shadow-lg 
+    transition 
+    hover:bg-orange-300
+  `;
+
   return (
-    <section className="relative flex items-center justify-center px-4 pt-20 pb-20 min-h-[80vh] bg-gradient-to-r from-primary-hover to-cream-50 overflow-hidden">
+    <section
+      className="
+        relative
+        flex items-center justify-center
+        px-4 pt-10 pb-10
+        min-h-[55vh]
+        bg-gradient-to-r from-primary-hover to-cream-50
+        overflow-hidden
+      "
+    >
+      {/* Background Watermarks */}
       {seedPositions.map((pos, index) => (
         <div
           key={index}
@@ -37,65 +68,65 @@ export default function HeroSection() {
           }}
         >
           <div className="absolute top-1/2 left-3/4 w-16 h-16">
-            <CoffeeBeanWaterMark size={64} className={`w-6 h-6 opacity-80`} />
+            <CoffeeBeanWaterMark size={64} className="w-6 h-6 opacity-80" />
           </div>
         </div>
       ))}
 
       <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
-        <div className="space-y-6">
-          <h1 className="text-6xl md:text-7xl font-bold  leading-tight text-orange-600">
-            Unlock Global Opportunities
+        {/* Left Content */}
+        <div className="space-y-2">
+          <h1
+            className="
+              text-6xl md:text-7xl 
+              font-bold 
+              leading-tight 
+              text-primary-light
+            "
+          >
+            Your Trusted Partner in
           </h1>
+
+          <h1
+            className="
+              text-6xl md:text-7xl 
+              font-bold 
+              leading-tight 
+              text-orange-400
+            "
+          >
+            Global Trade
+          </h1>
+
           <p className="text-xl text-primary-light">
-            Experience, reliability, speed, and excellence in every transaction. Partner with us to grow your business worldwide.
+            Experience, reliability, speed, and excellence in every transaction.
+            Partner with us to grow your business worldwide.
           </p>
+
+          {/* Buttons */}
           <div className="flex flex-wrap gap-4 mt-6">
-            <Link
-              href="/products/import"
-              className="bg-primary/80 text-white px-7 py-3 rounded-full hover:bg-orange-400 hover:text-white transition font-semibold shadow-lg"
-            >
-              Import
-            </Link>
-            <Link
-              href="/products/export"
-              className="bg-primary/80 text-white px-7 py-3 rounded-full hover:bg-orange-400 hover:text-white transition font-semibold shadow-lg"
-            >
-              Export
-            </Link>
-            <Link
-              href="/services/machinery-rent"
-              className="bg-primary/80 text-white px-7 py-3 rounded-full hover:bg-orange-400 hover:text-white transition font-semibold shadow-lg"
-            >
-              Machinery Rental
-            </Link>
-            <Link
-              href="/services/transport"
-              className="bg-primary/80 text-white px-7 py-3 rounded-full hover:bg-orange-400 hover:text-white transition font-semibold shadow-lg"
-            >
-              Transport
-            </Link>
-            <Link
-              href="/services/customs-clearance"
-              className="bg-primary/80 text-white px-7 py-3 rounded-full hover:bg-orange-400 hover:text-white transition font-semibold shadow-lg"
-            >
-              Custom Clearance
-            </Link>
-            <Link
-              href="/services/construction-materials"
-              className="bg-primary/80 text-white px-7 py-3 rounded-full hover:bg-orange-400 hover:text-white transition font-semibold shadow-lg"
-            >
-              Construction Materials
-            </Link>
+            {navButtons.map((btn) => (
+              <Link key={btn.href} href={btn.href} className={buttonClasses}>
+                {btn.label}
+              </Link>
+            ))}
           </div>
         </div>
+
+        {/* Right Image */}
         <div className="relative">
           <Image
             src="/images/hero-image.jpg"
             alt="Warehouse"
             width={576}
             height={384}
-            className="morph w-full h-96 object-cover rounded-3xl shadow-xl"
+            className="
+              morph 
+              w-full h-96 
+              object-cover 
+              rounded-3xl 
+              shadow-xl
+            "
           />
         </div>
       </div>

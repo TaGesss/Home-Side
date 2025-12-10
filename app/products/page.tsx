@@ -1,5 +1,5 @@
 import Link from "next/link"
-import { products } from "@/lib/products"
+import { exportProducts, Product } from "@/lib/products"
 import SeedWatermarksClient from '@/components/seed-watermarks-client'
 
 export default function ProductsPage() {
@@ -15,7 +15,7 @@ export default function ProductsPage() {
           <p className="text-primary-light mb-8">Explore our full product catalog. Click a product to request a sample or get a quote.</p>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-            {products.map((p) => (
+            {exportProducts.map((p: Product) => (
               <article key={p.title} className="bg-white rounded-lg border border-gray-200 shadow-sm p-6 flex flex-col">
                 <div className="flex items-center gap-4">
                   <div className="w-20 h-20 rounded-full overflow-hidden border-2 bg-white flex items-center justify-center">

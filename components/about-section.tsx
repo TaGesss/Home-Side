@@ -34,14 +34,13 @@ export default function AboutSection() {
             />
             <div className="absolute -bottom-8 -right-8 bg-orange-400 w-32 h-32 rounded-2xl z-10"></div>
           </div>
-          <div className="space-y-6">
-            <p className="text-lg text-primary-light">
-              With many years of experience, Home Side Trading P.L.C has grown
-              to become a leader in international trade services. Our commitment
-              to quality and customer satisfaction sets us apart in the
-              industry.
-            </p>
-            <div className="space-y-4">
+          <div className="space-y-2">
+            <p className="text-lg text-primary-light text-justify">
+  With years of proven experience, Home Side Trading P.L.C. has established itself as a leading international trade partner in Ethiopia. Our unwavering focus on quality, reliability, and customer satisfaction continues to differentiate us in the global marketplace.
+</p>
+
+
+            <div className="space-y-2">
               <div className="flex items-start space-x-4">
                 <div className="bg-primary-hover p-2 rounded-full">
                   <svg

@@ -13,8 +13,6 @@ export default function Home() {
       <HeroSection />
       <AboutSection />
       <ProductsSection />
-      {/* Small banner below products section */}
-      <ContactBanner size="small" showButton={true} />
       <ServicesSection />
       <CustomersSection />
        <WhyChooseUsSection />
