@@ -84,7 +84,7 @@ export default function HeroSection() {
               text-primary-light
             "
           >
-            Your Trusted Partner in
+            Your Trusted PartnerSSS in
           </h1>
 
           <h1
