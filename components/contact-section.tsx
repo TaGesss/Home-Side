@@ -69,7 +69,7 @@ export default function ContactSection() {
   return (
     <section id="contact" className="py-14 bg-primary-light text-white">
       <div className="max-w-6xl mx-auto px-4">
-        <h2 className="text-3xl font-bold text-center mb-12">Get In Touch</h2>
+        <h2 className="text-3xl font-bold text-center mb-12">Get In Touch with us</h2>
 
         {/* Thank You Message */}
         {showThankYou && (

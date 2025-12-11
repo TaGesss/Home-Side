@@ -34,6 +34,6 @@ jobs:
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
           local-dir: out/
-          server-dir: /auto.homesidetrading.com/
+          server-dir: /public_html/
           protocol: ftps    # set to ftp or ftps depending on your host; ftps is preferred if supported
           #port: ${{ secrets.FTP_PORT }}           # optional, default 21
