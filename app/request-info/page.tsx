@@ -1,7 +1,10 @@
+'use client';
 import RequestInfoForm from '@/components/request-info-form';
+import { useSearchParams } from 'next/navigation';
 
-export default function RequestInfoPage({ searchParams }: { searchParams?: { product?: string } }) {
-  const initialProduct = searchParams?.product ?? "";
+export default function RequestInfoPage() {
+  const searchPs = useSearchParams();
+  const initialProduct = searchPs.get('product')
 
   return (
     <main className="py-20 bg-gradient-to-b from-cream-50 to-white min-h-screen">
@@ -26,7 +29,7 @@ export default function RequestInfoPage({ searchParams }: { searchParams?: { pro
             </div>
           </section>
           <section>
-            <RequestInfoForm initialProduct={initialProduct} />
+            <RequestInfoForm initialProduct={initialProduct!} />
           </section>
         </div>
       </div>
