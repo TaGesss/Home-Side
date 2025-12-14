@@ -15,7 +15,7 @@ export default function Home() {
       <ProductsSection />
       <ServicesSection />
       <CustomersSection />
-       <WhyChooseUsSection />
+      <WhyChooseUsSection />
       <ContactSection />
     </>
   )

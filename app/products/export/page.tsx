@@ -2,6 +2,12 @@ import Link from "next/link";
 import Image from "next/image";
 import { exportProducts } from "@/lib/products";
 
+export const metadata = {
+  title: "Ethiopian Export Products | Coffee, Oilseeds, Pulses & Livestock",
+  description:
+    "Home Side Trading PLC exports Ethiopian coffee, sesame seeds, pulses, cereals, spices, and livestock to international markets.",
+};
+
 const exportCategories = [
   {
     name: "Coffee",

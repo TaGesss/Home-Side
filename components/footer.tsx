@@ -6,7 +6,7 @@ export default function Footer() {
       <div className="max-w-6xl mx-auto px-4 grid md:grid-cols-5 gap-8">
         <div>
           <h3 className="text-xl font-bold mb-4">
-            HOMESIDE <span className="text-orange-400">TRADING</span>
+            HOME SIDE <span className="text-orange-400">TRADING P.L.C</span>
           </h3>
           <p className="text-white-200">
             Your trusted partner in international trade and logistics services.
@@ -169,7 +169,7 @@ export default function Footer() {
         </div>
       </div>
       <div className="border-t border-white-800 mt-12 pt-8 text-center text-white">
-        <p>&copy; 2025 Homeside Trading PLC. All rights reserved.</p>
+        <p>&copy; 2025 Home Side Trading PLC. All rights reserved.</p>
       </div>
     </footer>
   );

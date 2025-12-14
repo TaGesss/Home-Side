@@ -1,6 +1,11 @@
 import Link from "next/link"
 import { exportProducts, Product } from "@/lib/products"
 import SeedWatermarksClient from '@/components/seed-watermarks-client'
+export const metadata = {
+  title: "Import Products to Ethiopia | Vehicles, Machinery & Equipment",
+  description:
+    "Home Side Trading PLC imports vehicles, spare parts, construction equipment, and regulatory machinery into Ethiopia.",
+};
 
 export default function ProductsPage() {
   return (

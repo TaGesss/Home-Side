@@ -1,87 +1,282 @@
-
-
 export type Product = {
   title: string;
   href: string;
   img?: string;
   subtitle?: string;
   description?: string;
+  imgAlt?: string; // added for image fallback description
 };
 
 export const exportProducts: Product[] = [
   // 1. Livestock and Processed Meat
-  { title: "Cattle", href: "#", img: "/images/Cattle.jpg", subtitle: "Livestock and Processed Meat" },
-  { title: "Goat", href: "#", img: "/images/Goat.jpg", subtitle: "Livestock and Processed Meat" },
-  { title: "Sheep", href: "#", img: "/images/Sheep.jpg", subtitle: "Livestock and Processed Meat" },
+  { 
+    title: "Cattle for Sale - High-Quality Livestock", 
+    href: "#", 
+    img: "/images/Cattle.jpg", 
+    subtitle: "Livestock and Processed Meat",
+    description: "A Quality cattle available for sale. Ideal for meat production. Ethically raised livestock with proper documentation.",
+    imgAlt: "Healthy cattle raised for meat or breeding purposes"
+  },
+  { 
+    title: "Goats for Sale - Healthy Livestock", 
+    href: "#", 
+    img: "/images/Goat.jpg", 
+    subtitle: "Livestock and Processed Meat",
+    description: "Healthy goats available for sale, perfect for dairy or meat production. Ethically farmed and fully documented.",
+    imgAlt: "Goat livestock ready for sale"
+  },
+  { 
+    title: "Sheep for Sale - Premium Livestock", 
+    href: "#", 
+    img: "/images/Sheep.jpg", 
+    subtitle: "Livestock and Processed Meat",
+    description: "High-quality sheep for sale. Suitable for wool, meat, or breeding.",
+    imgAlt: "Premium sheep for sale"
+  },
 
   // 2. Coffee and Tea
-  { title: "Arabica (Sidamo, Yirgacheffe, Harar)", href: "#", img: "/images/Arebica Coffee.jpg", subtitle: "Coffee and Tea" },
-  { title: "Specialty Coffee", href: "#", img: "/images/Speciality Coffee.webp", subtitle: "Coffee and Tea" },
-  { title: "Tea Leaves", href: "#", img: "/images/Tea leaves.jpg", subtitle: "Coffee and Tea" },
+  { 
+    title: "Arabica Coffee - Sidamo, Yirgacheffe, Harar", 
+    href: "#", 
+    img: "/images/Arebica Coffee.jpg", 
+    subtitle: "Coffee and Tea",
+    description: "Fresh Arabica coffee from Sidamo, Yirgacheffe, and Harar regions. Rich aroma and superior flavor for coffee lovers and specialty cafes.",
+    imgAlt: "Arabica coffee beans from Sidamo, Yirgacheffe, Harar"
+  },
+  { 
+    title: "Specialty Coffee Beans", 
+    href: "#", 
+    img: "/images/Speciality Coffee.webp", 
+    subtitle: "Coffee and Tea",
+    description: "Premium specialty coffee beans sourced from Ethiopia. Handpicked for exceptional taste and aroma. Perfect for connoisseurs and cafes.",
+    imgAlt: "Ethiopian specialty coffee beans"
+  },
+  { 
+    title: "Organic Tea Leaves", 
+    href: "#", 
+    img: "/images/Tea leaves.jpg", 
+    subtitle: "Coffee and Tea",
+    description: "High-quality organic tea leaves. Perfect for brewing refreshing, healthy, and aromatic teas. Sustainably sourced from Ethiopia.",
+    imgAlt: "Organic tea leaves for brewing"
+  },
 
   // 3. Oilseeds
-  { title: "Wollega Sesame Seed", href: "#", img: "/images/Wollega Sesame Seed.jpg", subtitle: "Sesame seeds" },
-  { title: "Whitish Humera", href: "#", img: "/images/Whitish Humera.jpg", subtitle: "Sesame seeds" },
-  { title: "Reddish Humera", href: "#", img: "/images/Reddish Humera.jpg", subtitle: "Sesame seeds" },
-  { title: "Niger seed", href: "#", img: "/images/Niger seed.jpg", subtitle: "Oilseeds" },
-  { title: "Sunflower seeds", href: "#", img: "/images/Sunflower seeds.jpg", subtitle: "Oilseeds" },
-  { title: "Soybean", href: "#", img: "/images/Soybean.webp", subtitle: "Oilseeds" },
-  { title: "Linseed / Flaxseed", href: "#", img: "/images/Linseed - Flaxseed.jpg", subtitle: "Oilseeds" },
-  { title: "Peanut", href: "#", img: "/images/Peanut.jpg", subtitle: "Oilseeds" },
+  { 
+    title: "Wollega Sesame Seed - Premium Quality", 
+    href: "#", 
+    img: "/images/Wollega Sesame Seed.jpg", 
+    subtitle: "Sesame seeds",
+    description: "High-quality sesame seeds from Wollega region. Ideal for cooking, oil extraction, and export.",
+    imgAlt: "Wollega sesame seeds"
+  },
+  { 
+    title: "Whitish Humera Sesame Seed", 
+    href: "#", 
+    img: "/images/Whitish Humera.jpg", 
+    subtitle: "Sesame seeds",
+    description: "Premium whitish sesame seeds sourced from Humera. Suitable for both culinary and industrial uses.",
+    imgAlt: "Whitish Humera sesame seeds"
+  },
+  { 
+    title: "Reddish Humera Sesame Seed", 
+    href: "#", 
+    img: "/images/Reddish Humera.jpg", 
+    subtitle: "Sesame seeds",
+    description: "High-quality reddish sesame seeds from Humera, perfect for export and culinary applications.",
+    imgAlt: "Reddish Humera sesame seeds"
+  },
+  { title: "Niger Seed", href: "#", img: "/images/Niger seed.jpg", subtitle: "Oilseeds", description: "Niger seeds suitable for oil extraction and livestock feed.", imgAlt: "Niger seeds for oil and feed" },
+  { title: "Sunflower Seeds", href: "#", img: "/images/Sunflower seeds.jpg", subtitle: "Oilseeds", description: "Premium sunflower seeds for oil production and snacks.", imgAlt: "Sunflower seeds" },
+  { title: "Soybean", href: "#", img: "/images/Soybean.webp", subtitle: "Oilseeds", description: "High-quality soybeans for food and oil processing.", imgAlt: "Soybeans for food and oil" },
+  { title: "Linseed / Flaxseed", href: "#", img: "/images/Linseed - Flaxseed.jpg", subtitle: "Oilseeds", description: "Flaxseed used for health products and oil extraction.", imgAlt: "Flaxseed / Linseed" },
+  { title: "Peanut", href: "#", img: "/images/Peanut.jpg", subtitle: "Oilseeds", description: "Premium peanuts for snacks, oil, and food production.", imgAlt: "Peanuts for oil and consumption" },
 
   // 4. Pulses and Legumes
-  { title: "Kabuli Chickpea", href: "#", img: "/images/Kabuli Chickpea.jpg", subtitle: "Chickpeas" },
-  { title: "Desi Chickpea", href: "#", img: "/images/Desi Chickpea.jpg", subtitle: "Chickpeas" },
-  { title: "Lentils", href: "#", img: "/images/Lentils.jpg", subtitle: "Pulses and Legumes" },
-  { title: "Faba beans (broad beans)", href: "#", img: "/images/Faba beans (broad beans).jpg", subtitle: "Pulses and Legumes" },
-  { title: "Redy kidney bean", href: "#", img: "/images/Redy kidney bean.jpg", subtitle: "Haricot beans" },
-  { title: "Pinto beans", href: "#", img: "/images/Pinto beans.jpg", subtitle: "Haricot beans" },
-  { title: "Red speckled bean", href: "#", img: "/images/Red speckled bean.jpg", subtitle: "Haricot beans" },
-  { title: "Large light brown kidney peas", href: "#", img: "/images/Large light brown kidney peas.jpg", subtitle: "Haricot beans" },
-  { title: "White pea", href: "#", img: "/images/White pea.jpg", subtitle: "Pulses and Legumes" },
-  { title: "Green mung bean", href: "#", img: "/images/Green mung bean.jpg", subtitle: "Pulses and Legumes" },
-  { title: "Pigeon bean", href: "#", img: "/images/Pigeon bean.jpg", subtitle: "Pulses and Legumes" },
-  { title: "Lupin", href: "#", img: "/images/Lupin.jpg", subtitle: "Pulses and Legumes" },
+  { title: "Kabuli Chickpea", href: "#", img: "/images/Kabuli Chickpea.jpg", subtitle: "Chickpeas", description: "High-quality Kabuli chickpeas for cooking and export.", imgAlt: "Kabuli chickpeas" },
+  { title: "Desi Chickpea", href: "#", img: "/images/Desi Chickpea.jpg", subtitle: "Chickpeas", description: "Premium Desi chickpeas suitable for cooking and export.", imgAlt: "Desi chickpeas" },
+  { title: "Lentils", href: "#", img: "/images/Lentils.jpg", subtitle: "Pulses and Legumes", description: "Nutrient-rich lentils perfect for soups, stews, and export.", imgAlt: "Lentils" },
+  { title: "Faba Beans (Broad Beans)", href: "#", img: "/images/Faba beans (broad beans).jpg", subtitle: "Pulses and Legumes", description: "High-quality faba beans for culinary use and export.", imgAlt: "Faba beans / Broad beans" },
+  { title: "Red Kidney Bean", href: "#", img: "/images/Redy kidney bean.jpg", subtitle: "Haricot beans", description: "Premium red kidney beans for cooking and export.", imgAlt: "Red kidney beans" },
+  { title: "Pinto Beans", href: "#", img: "/images/Pinto beans.jpg", subtitle: "Haricot beans", description: "Quality pinto beans suitable for culinary use.", imgAlt: "Pinto beans" },
+  { title: "Red Speckled Bean", href: "#", img: "/images/Red speckled bean.jpg", subtitle: "Haricot beans", description: "High-quality red speckled beans for cooking.", imgAlt: "Red speckled beans" },
+  { title: "Large Light Brown Kidney Peas", href: "#", img: "/images/Large light brown kidney peas.jpg", subtitle: "Haricot beans", description: "Premium large brown kidney peas for culinary use.", imgAlt: "Large light brown kidney peas" },
+  { title: "White Pea", href: "#", img: "/images/White pea.jpg", subtitle: "Pulses and Legumes", description: "High-quality white peas for cooking and export.", imgAlt: "White peas" },
+  { title: "Green Mung Bean", href: "#", img: "/images/Green mung bean.jpg", subtitle: "Pulses and Legumes", description: "Premium green mung beans for sprouting and cooking.", imgAlt: "Green mung beans" },
+  { title: "Pigeon Bean", href: "#", img: "/images/Pigeon bean.jpg", subtitle: "Pulses and Legumes", description: "High-quality pigeon beans for culinary use.", imgAlt: "Pigeon beans" },
+  { title: "Lupin", href: "#", img: "/images/Lupin.jpg", subtitle: "Pulses and Legumes", description: "Nutritious lupin beans for cooking and food processing.", imgAlt: "Lupin beans" },
 
   // 5. Spices and Herbs
-  { title: "Cardamom", href: "#", img: "/images/Cardamom.jpg", subtitle: "Spices and Herbs" },
-  { title: "Ginger", href: "#", img: "/images/Ginger.jpg", subtitle: "Spices and Herbs" },
-  { title: "Turmeric finger", href: "#", img: "/images/Turmeric finger.jpg", subtitle: "Spices and Herbs" },
-  { title: "Long pepper", href: "#", img: "/images/Long pepper.jpg", subtitle: "Spices and Herbs" },
-  { title: "Black cumin", href: "#", img: "/images/Black cumin.jpg", subtitle: "Spices and Herbs" },
+  { title: "Cardamom - Premium Spice", href: "#", img: "/images/Cardamom.jpg", subtitle: "Spices and Herbs", description: "High-quality cardamom for cooking, tea, and export.", imgAlt: "Cardamom pods" },
+  { title: "Ginger - Fresh and Aromatic", href: "#", img: "/images/Ginger.jpg", subtitle: "Spices and Herbs", description: "Fresh ginger for culinary and medicinal use.", imgAlt: "Fresh ginger roots" },
+  { title: "Turmeric Finger", href: "#", img: "/images/Turmeric finger.jpg", subtitle: "Spices and Herbs", description: "Premium turmeric fingers for cooking and natural remedies.", imgAlt: "Turmeric finger roots" },
+  { title: "Long Pepper", href: "#", img: "/images/Long pepper.jpg", subtitle: "Spices and Herbs", description: "Exotic long pepper for culinary use and medicinal purposes.", imgAlt: "Long pepper spice" },
+  { title: "Black Cumin", href: "#", img: "/images/Black cumin.jpg", subtitle: "Spices and Herbs", description: "High-quality black cumin seeds for cooking and herbal use.", imgAlt: "Black cumin seeds" },
 
   // 6. Cereals
-  { title: "Teff (used for injera)", href: "#", img: "/images/Teff.jpg", subtitle: "Cereals" },
-  { title: "Barley", href: "#", img: "/images/Barley.jpg", subtitle: "Cereals" },
+  { title: "Teff (used for injera)", href: "#", img: "/images/Teff.jpg", subtitle: "Cereals", description: "Ethiopian teff for making traditional injera. Nutritious and high-quality.", imgAlt: "Teff grains" },
+  { title: "Barley", href: "#", img: "/images/Barley.jpg", subtitle: "Cereals", description: "Premium barley grains suitable for food, brewing, and export.", imgAlt: "Barley grains" },
 ];
 
 export const importProducts: Product[] = [
   // 1. Vehicles
-  { title: "Passenger Vehicles", href: "#", img: "/images/Passenger Vehicles.jpg", subtitle: "Vehicles" },
-  { title: "Commercial Vehicles", href: "#", img: "/images/Commercial Vehicles.jpg", subtitle: "Vehicles" },
-  { title: "Special Purpose Vehicles", href: "#", img: "/images/Special Purpose Vehicles.webp", subtitle: "Vehicles" },
+  { 
+    title: "Passenger Vehicles - High-Quality Cars", 
+    href: "#", 
+    img: "/images/Passenger Vehicles.jpg", 
+    subtitle: "Vehicles", 
+    description: "Reliable passenger vehicles suitable for personal and commercial use.", 
+    imgAlt: "Passenger vehicles for sale" 
+  },
+  { 
+    title: "Commercial Vehicles - Trucks and Vans", 
+    href: "#", 
+    img: "/images/Commercial Vehicles.jpg", 
+    subtitle: "Vehicles", 
+    description: "Durable commercial vehicles for logistics, transport, and business operations.", 
+    imgAlt: "Commercial trucks and vans" 
+  },
+  { 
+    title: "Special Purpose Vehicles", 
+    href: "#", 
+    img: "/images/Special Purpose Vehicles.webp", 
+    subtitle: "Vehicles", 
+    description: "Special purpose vehicles for construction, medical, and specialized needs.", 
+    imgAlt: "Special purpose vehicles" 
+  },
 
   // 2. Spare Parts
-  { title: "Engine & Powertrain Parts", href: "#", img: "/images/Engine & Powertrain Parts.webp", subtitle: "Spare Parts" },
-  { title: "Electrical & Electronics", href: "#", img: "/images/Electrical & Electronics.webp", subtitle: "Spare Parts" },
-  { title: "Suspension & Brake Parts", href: "#", img: "/images/Suspension & Brake Parts.webp", subtitle: "Spare Parts" },
-  { title: "Body Parts", href: "#", img: "/images/Body Parts.jpg", subtitle: "Spare Parts" },
-  { title: "Tires & Wheels", href: "#", img: "/images/Tires & Wheels.jpg", subtitle: "Spare Parts" },
+  { 
+    title: "Engine & Powertrain Parts", 
+    href: "#", 
+    img: "/images/Engine & Powertrain Parts.webp", 
+    subtitle: "Spare Parts", 
+    description: "High-quality engine and powertrain parts for vehicle maintenance and repair.", 
+    imgAlt: "Engine and powertrain spare parts" 
+  },
+  { 
+    title: "Electrical & Electronics", 
+    href: "#", 
+    img: "/images/Electrical & Electronics.webp", 
+    subtitle: "Spare Parts", 
+    description: "Reliable electrical and electronic components for vehicles.", 
+    imgAlt: "Vehicle electrical and electronic parts" 
+  },
+  { 
+    title: "Suspension & Brake Parts", 
+    href: "#", 
+    img: "/images/Suspension & Brake Parts.webp", 
+    subtitle: "Spare Parts", 
+    description: "Premium suspension and brake parts for safety and performance.", 
+    imgAlt: "Suspension and brake parts" 
+  },
+  { 
+    title: "Body Parts", 
+    href: "#", 
+    img: "/images/Body Parts.jpg", 
+    subtitle: "Spare Parts", 
+    description: "Vehicle body parts for repairs and replacements.", 
+    imgAlt: "Vehicle body parts" 
+  },
+  { 
+    title: "Tires & Wheels", 
+    href: "#", 
+    img: "/images/Tires & Wheels.jpg", 
+    subtitle: "Spare Parts", 
+    description: "Durable tires and wheels for all vehicle types.", 
+    imgAlt: "Vehicle tires and wheels" 
+  },
 
   // 3. Construction Equipment
-  { title: "Earthmoving Equipment", href: "#", img: "/images/Earthmoving Equipment.webp", subtitle: "Construction Equipment" },
-  { title: "Material Handling Equipment", href: "#", img: "/images/Material Handling Equipment.jpg", subtitle: "Construction Equipment" },
-  { title: "Concrete Equipment", href: "#", img: "/images/Concrete Equipment.jpg", subtitle: "Construction Equipment" },
-  { title: "Generators & Power Equipment", href: "#", img: "/images/Generators & Power Equipment.jpg", subtitle: "Construction Equipment" },
+  { 
+    title: "Earthmoving Equipment", 
+    href: "#", 
+    img: "/images/Earthmoving Equipment.webp", 
+    subtitle: "Construction Equipment", 
+    description: "Heavy-duty earthmoving machines for construction projects.", 
+    imgAlt: "Earthmoving construction equipment" 
+  },
+  { 
+    title: "Material Handling Equipment", 
+    href: "#", 
+    img: "/images/Material Handling Equipment.jpg", 
+    subtitle: "Construction Equipment", 
+    description: "Equipment for efficient material handling in warehouses and construction.", 
+    imgAlt: "Material handling equipment" 
+  },
+  { 
+    title: "Concrete Equipment", 
+    href: "#", 
+    img: "/images/Concrete Equipment.jpg", 
+    subtitle: "Construction Equipment", 
+    description: "Concrete mixers, pumps, and related machinery for construction projects.", 
+    imgAlt: "Concrete construction equipment" 
+  },
+  { 
+    title: "Generators & Power Equipment", 
+    href: "#", 
+    img: "/images/Generators & Power Equipment.jpg", 
+    subtitle: "Construction Equipment", 
+    description: "Reliable generators and power equipment for industrial and construction use.", 
+    imgAlt: "Generators and power equipment" 
+  },
 
   // 4. Regulatory Equipment
-  { title: "Safety & Compliance Equipment", href: "#", img: "/images/Safety & Compliance Equipment.png", subtitle: "Regulatory Equipment" },
-  { title: "Inspection & Diagnostic Equipment", href: "#", img: "/images/Inspection & Diagnostic Equipment.png", subtitle: "Regulatory Equipment" },
-  { title: "Traffic & Road Regulatory Items", href: "#", img: "/images/Traffic & Road Regulatory Items.jpg", subtitle: "Regulatory Equipment" },
+  { 
+    title: "Safety & Compliance Equipment", 
+    href: "#", 
+    img: "/images/Safety & Compliance Equipment.png", 
+    subtitle: "Regulatory Equipment", 
+    description: "Equipment for workplace safety and regulatory compliance.", 
+    imgAlt: "Safety and compliance equipment" 
+  },
+  { 
+    title: "Inspection & Diagnostic Equipment", 
+    href: "#", 
+    img: "/images/Inspection & Diagnostic Equipment.png", 
+    subtitle: "Regulatory Equipment", 
+    description: "Tools and equipment for inspection and diagnostics.", 
+    imgAlt: "Inspection and diagnostic tools" 
+  },
+  { 
+    title: "Traffic & Road Regulatory Items", 
+    href: "#", 
+    img: "/images/Traffic & Road Regulatory Items.jpg", 
+    subtitle: "Regulatory Equipment", 
+    description: "Traffic signs and road regulatory items for safe transport.", 
+    imgAlt: "Traffic and road safety items" 
+  },
 
   // 5. Car Decor & Accessories
-  { title: "Interior Accessories", href: "#", img: "/images/Interior Accessories.jpg", subtitle: "Car Decor & Accessories" },
-  { title: "Exterior Accessories", href: "#", img: "/images/Exterior Accessories.webp", subtitle: "Car Decor & Accessories" },
-  { title: "Lighting & Style", href: "#", img: "/images/Lighting & Style.jpg", subtitle: "Car Decor & Accessories" },
-  { title: "Digital & Comfort Enhancements", href: "#", img: "/images/Digital & Comfort Enhancements.webp", subtitle: "Car Decor & Accessories" },
+  { 
+    title: "Interior Accessories", 
+    href: "#", 
+    img: "/images/Interior Accessories.jpg", 
+    subtitle: "Car Decor & Accessories", 
+    description: "Car interior accessories for comfort and style.", 
+    imgAlt: "Car interior accessories" 
+  },
+  { 
+    title: "Exterior Accessories", 
+    href: "#", 
+    img: "/images/Exterior Accessories.webp", 
+    subtitle: "Car Decor & Accessories", 
+    description: "Car exterior accessories for protection and aesthetics.", 
+    imgAlt: "Car exterior accessories" 
+  },
+  { 
+    title: "Lighting & Style", 
+    href: "#", 
+    img: "/images/Lighting & Style.jpg", 
+    subtitle: "Car Decor & Accessories", 
+    description: "Car lighting solutions and style enhancements.", 
+    imgAlt: "Car lighting and style accessories" 
+  },
+  { 
+    title: "Digital & Comfort Enhancements", 
+    href: "#", 
+    img: "/images/Digital & Comfort Enhancements.webp", 
+    subtitle: "Car Decor & Accessories", 
+    description: "Digital and comfort upgrades for modern vehicles.", 
+    imgAlt: "Car digital and comfort accessories" 
+  },
 ];

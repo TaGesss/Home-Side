@@ -27,7 +27,7 @@ export default function AboutPage() {
   return (
     <main className="py-20 bg-gradient-to-b from-cream-50 to-white min-h-screen">
       <div className="max-w-6xl mx-auto px-4">
-        <h1 className="text-5xl font-extrabold text-primary mb-8 text-center tracking-tight drop-shadow-lg">About Homeside Trading PLC</h1>
+        <h1 className="text-5xl font-extrabold text-primary mb-8 text-center tracking-tight drop-shadow-lg">About Home Side Trading P.L.C</h1>
         <section className="mb-16 flex flex-col md:flex-row gap-10 items-center">
           <div className="md:w-1/2">
             <Image src="/images/about-hero.jpg" alt="Homeside Trading" width={600} height={400} className="rounded-3xl shadow-xl object-cover w-full" />
@@ -35,7 +35,7 @@ export default function AboutPage() {
           <div className="md:w-1/2">
             <h2 className="text-3xl font-bold text-primary mb-4">Who We Are</h2>
             <p className="text-lg text-primary-light mb-4 leading-relaxed text-justify">
-              Homeside Trading PLC is a provider of international trade and logistics solutions, headquartered in Addis Ababa, Ethiopia. With a track record in import, export, machinery rental, and transport, we empower businesses to reach new markets and achieve operational excellence. Our team combines deep industry expertise with a passion for innovation, ensuring every client receives tailored, reliable, and cost-effective services.
+              Home Side Trading PLC is a provider of international trade and logistics solutions, headquartered in Addis Ababa, Ethiopia. With a track record in import, export, machinery rental, and transport, we empower businesses to reach new markets and achieve operational excellence. Our team combines deep industry expertise with a passion for innovation, ensuring every client receives tailored, reliable, and cost-effective services.
             </p>
             <p className="text-lg text-primary-light mb-4 leading-relaxed text-justify">
               We believe in building lasting partnerships based on trust, transparency, and mutual growth. Our commitment to quality and customer satisfaction is at the heart of everything we do.
