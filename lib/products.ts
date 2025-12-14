@@ -9,12 +9,17 @@ export type Product = {
 };
 
 export const exportProducts: Product[] = [
-  // 1. Coffee and Tea
+  // 1. Livestock and Processed Meat
+  { title: "Cattle", href: "#", img: "/images/Cattle.jpg", subtitle: "Livestock and Processed Meat" },
+  { title: "Goat", href: "#", img: "/images/Goat.jpg", subtitle: "Livestock and Processed Meat" },
+  { title: "Sheep", href: "#", img: "/images/Sheep.jpg", subtitle: "Livestock and Processed Meat" },
+
+  // 2. Coffee and Tea
   { title: "Arabica (Sidamo, Yirgacheffe, Harar)", href: "#", img: "/images/Arebica Coffee.jpg", subtitle: "Coffee and Tea" },
   { title: "Specialty Coffee", href: "#", img: "/images/Speciality Coffee.webp", subtitle: "Coffee and Tea" },
   { title: "Tea Leaves", href: "#", img: "/images/Tea leaves.jpg", subtitle: "Coffee and Tea" },
 
-  // 2. Oilseeds
+  // 3. Oilseeds
   { title: "Wollega Sesame Seed", href: "#", img: "/images/Wollega Sesame Seed.jpg", subtitle: "Sesame seeds" },
   { title: "Whitish Humera", href: "#", img: "/images/Whitish Humera.jpg", subtitle: "Sesame seeds" },
   { title: "Reddish Humera", href: "#", img: "/images/Reddish Humera.jpg", subtitle: "Sesame seeds" },
@@ -24,7 +29,7 @@ export const exportProducts: Product[] = [
   { title: "Linseed / Flaxseed", href: "#", img: "/images/Linseed - Flaxseed.jpg", subtitle: "Oilseeds" },
   { title: "Peanut", href: "#", img: "/images/Peanut.jpg", subtitle: "Oilseeds" },
 
-  // 3. Pulses and Legumes
+  // 4. Pulses and Legumes
   { title: "Kabuli Chickpea", href: "#", img: "/images/Kabuli Chickpea.jpg", subtitle: "Chickpeas" },
   { title: "Desi Chickpea", href: "#", img: "/images/Desi Chickpea.jpg", subtitle: "Chickpeas" },
   { title: "Lentils", href: "#", img: "/images/Lentils.jpg", subtitle: "Pulses and Legumes" },
@@ -38,14 +43,14 @@ export const exportProducts: Product[] = [
   { title: "Pigeon bean", href: "#", img: "/images/Pigeon bean.jpg", subtitle: "Pulses and Legumes" },
   { title: "Lupin", href: "#", img: "/images/Lupin.jpg", subtitle: "Pulses and Legumes" },
 
-  // 4. Spices and Herbs
+  // 5. Spices and Herbs
   { title: "Cardamom", href: "#", img: "/images/Cardamom.jpg", subtitle: "Spices and Herbs" },
   { title: "Ginger", href: "#", img: "/images/Ginger.jpg", subtitle: "Spices and Herbs" },
   { title: "Turmeric finger", href: "#", img: "/images/Turmeric finger.jpg", subtitle: "Spices and Herbs" },
   { title: "Long pepper", href: "#", img: "/images/Long pepper.jpg", subtitle: "Spices and Herbs" },
   { title: "Black cumin", href: "#", img: "/images/Black cumin.jpg", subtitle: "Spices and Herbs" },
 
-  // 5. Cereals
+  // 6. Cereals
   { title: "Teff (used for injera)", href: "#", img: "/images/Teff.jpg", subtitle: "Cereals" },
   { title: "Barley", href: "#", img: "/images/Barley.jpg", subtitle: "Cereals" },
 ];
