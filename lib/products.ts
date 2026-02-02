@@ -93,14 +93,13 @@ export const exportProducts: Product[] = [
 
   // 4. Pulses and Legumes
   { title: "Kabuli Chickpea", href: "#", img: "/images/Kabuli Chickpea.jpg", subtitle: "Chickpeas", description: "High-quality Kabuli chickpeas for cooking and export.", imgAlt: "Kabuli chickpeas" },
-  { title: "Desi Chickpea", href: "#", img: "/images/Desi Chickpea.jpg", subtitle: "Chickpeas", description: "Premium Desi chickpeas suitable for cooking and export.", imgAlt: "Desi chickpeas" },
   { title: "Lentils", href: "#", img: "/images/Lentils.jpg", subtitle: "Pulses and Legumes", description: "Nutrient-rich lentils perfect for soups, stews, and export.", imgAlt: "Lentils" },
   { title: "Faba Beans (Broad Beans)", href: "#", img: "/images/Faba beans (broad beans).jpg", subtitle: "Pulses and Legumes", description: "High-quality faba beans for culinary use and export.", imgAlt: "Faba beans / Broad beans" },
   { title: "Red Kidney Bean", href: "#", img: "/images/Redy kidney bean.jpg", subtitle: "Haricot beans", description: "Premium red kidney beans for cooking and export.", imgAlt: "Red kidney beans" },
   { title: "Pinto Beans", href: "#", img: "/images/Pinto beans.jpg", subtitle: "Haricot beans", description: "Quality pinto beans suitable for culinary use.", imgAlt: "Pinto beans" },
   { title: "Red Speckled Bean", href: "#", img: "/images/Red speckled bean.jpg", subtitle: "Haricot beans", description: "High-quality red speckled beans for cooking.", imgAlt: "Red speckled beans" },
   { title: "Large Light Brown Kidney Peas", href: "#", img: "/images/Large light brown kidney peas.jpg", subtitle: "Haricot beans", description: "Premium large brown kidney peas for culinary use.", imgAlt: "Large light brown kidney peas" },
-  { title: "White Pea", href: "#", img: "/images/White pea.jpg", subtitle: "Pulses and Legumes", description: "High-quality white peas for cooking and export.", imgAlt: "White peas" },
+  { title: "White Bean", href: "#", img: "/images/White pea.jpg", subtitle: "Pulses and Legumes", description: "High-quality white Beans for  export.", imgAlt: "White peas" },
   { title: "Green Mung Bean", href: "#", img: "/images/Green mung bean.jpg", subtitle: "Pulses and Legumes", description: "Premium green mung beans for sprouting and cooking.", imgAlt: "Green mung beans" },
   { title: "Pigeon Bean", href: "#", img: "/images/Pigeon bean.jpg", subtitle: "Pulses and Legumes", description: "High-quality pigeon beans for culinary use.", imgAlt: "Pigeon beans" },
   { title: "Lupin", href: "#", img: "/images/Lupin.jpg", subtitle: "Pulses and Legumes", description: "Nutritious lupin beans for cooking and food processing.", imgAlt: "Lupin beans" },
