@@ -8,59 +8,20 @@ export type Product = {
 };
 
 export const exportProducts: Product[] = [
-  // 1. Livestock and Processed Meat
-  { 
-    title: "Cattle for Sale - High-Quality Livestock", 
-    href: "#", 
-    img: "/images/Cattle.jpg", 
-    subtitle: "Livestock and Processed Meat",
-    description: "A Quality cattle available for sale. Ideal for meat production. Ethically raised livestock with proper documentation.",
-    imgAlt: "Healthy cattle raised for meat or breeding purposes"
-  },
-  { 
-    title: "Goats for Sale - Healthy Livestock", 
-    href: "#", 
-    img: "/images/Goat.jpg", 
-    subtitle: "Livestock and Processed Meat",
-    description: "Healthy goats available for sale, perfect for dairy or meat production. Ethically farmed and fully documented.",
-    imgAlt: "Goat livestock ready for sale"
-  },
-  { 
-    title: "Sheep for Sale - Premium Livestock", 
-    href: "#", 
-    img: "/images/Sheep.jpg", 
-    subtitle: "Livestock and Processed Meat",
-    description: "High-quality sheep for sale. Suitable for wool, meat, or breeding.",
-    imgAlt: "Premium sheep for sale"
-  },
+  { title: "Black Cumin", href: "#", img: "/images/Black cumin.jpg", subtitle: "Spices and Herbs", description: "High-quality black cumin seeds for cooking and herbal use.", imgAlt: "Black cumin seeds" },
+ { title: "White Beans", href: "#", img: "/images/White pea.jpg", subtitle: "Pulses and Legumes", description: "High-quality white Beans for  export.", imgAlt: "White peas" },
+ // 4. Pulses and Legumes
+  { title: "Kabuli Chickpea", href: "#", img: "/images/Kabuli Chickpea.jpg", subtitle: "Chickpeas", description: "High-quality Kabuli chickpeas for cooking and export.", imgAlt: "Kabuli chickpeas" },
+  { title: "Lentils", href: "#", img: "/images/Lentils.jpg", subtitle: "Pulses and Legumes", description: "Nutrient-rich lentils perfect for soups, stews, and export.", imgAlt: "Lentils" },
+  { title: "Faba Beans (Broad Beans)", href: "#", img: "/images/Faba beans (broad beans).jpg", subtitle: "Pulses and Legumes", description: "High-quality faba beans for culinary use and export.", imgAlt: "Faba beans / Broad beans" },
+  { title: "Red Kidney Beans", href: "#", img: "/images/Redy kidney bean.jpg", subtitle: "Haricot beans", description: "Premium red kidney beans for cooking and export.", imgAlt: "Red kidney beans" },
+  { title: "Pinto Beans", href: "#", img: "/images/Pinto beans.jpg", subtitle: "Haricot beans", description: "Quality pinto beans suitable for culinary use.", imgAlt: "Pinto beans" },
+  { title: "Red Speckled Beans", href: "#", img: "/images/Red speckled bean.jpg", subtitle: "Haricot beans", description: "High-quality red speckled beans for cooking.", imgAlt: "Red speckled beans" },
 
-  // 2. Coffee and Tea
-  { 
-    title: "Arabica Coffee - Sidamo, Yirgacheffe, Harar", 
-    href: "#", 
-    img: "/images/Arebica Coffee.jpg", 
-    subtitle: "Coffee and Tea",
-    description: "Fresh Arabica coffee from Sidamo, Yirgacheffe, and Harar regions. Rich aroma and superior flavor for coffee lovers and specialty cafes.",
-    imgAlt: "Arabica coffee beans from Sidamo, Yirgacheffe, Harar"
-  },
-  { 
-    title: "Specialty Coffee Beans", 
-    href: "#", 
-    img: "/images/Speciality Coffee.webp", 
-    subtitle: "Coffee and Tea",
-    description: "Premium specialty coffee beans sourced from Ethiopia. Handpicked for exceptional taste and aroma. Perfect for connoisseurs and cafes.",
-    imgAlt: "Ethiopian specialty coffee beans"
-  },
-  { 
-    title: "Organic Tea Leaves", 
-    href: "#", 
-    img: "/images/Tea leaves.jpg", 
-    subtitle: "Coffee and Tea",
-    description: "High-quality organic tea leaves. Perfect for brewing refreshing, healthy, and aromatic teas. Sustainably sourced from Ethiopia.",
-    imgAlt: "Organic tea leaves for brewing"
-  },
-
-  // 3. Oilseeds
+ 
+  { title: "Green Mung Beans", href: "#", img: "/images/Green mung bean.jpg", subtitle: "Pulses and Legumes", description: "Premium green mung beans for sprouting and cooking.", imgAlt: "Green mung beans" },
+  { title: "Pigeon Beans", href: "#", img: "/images/Pigeon bean.jpg", subtitle: "Pulses and Legumes", description: "High-quality pigeon beans for culinary use.", imgAlt: "Pigeon beans" },
+  
   { 
     title: "Wollega Sesame Seed - Premium Quality", 
     href: "#", 
@@ -91,29 +52,65 @@ export const exportProducts: Product[] = [
   { title: "Linseed / Flaxseed", href: "#", img: "/images/Linseed - Flaxseed.jpg", subtitle: "Oilseeds", description: "Flaxseed used for health products and oil extraction.", imgAlt: "Flaxseed / Linseed" },
   { title: "Peanut", href: "#", img: "/images/Peanut.jpg", subtitle: "Oilseeds", description: "Premium peanuts for snacks, oil, and food production.", imgAlt: "Peanuts for oil and consumption" },
 
-  // 4. Pulses and Legumes
-  { title: "Kabuli Chickpea", href: "#", img: "/images/Kabuli Chickpea.jpg", subtitle: "Chickpeas", description: "High-quality Kabuli chickpeas for cooking and export.", imgAlt: "Kabuli chickpeas" },
-  { title: "Lentils", href: "#", img: "/images/Lentils.jpg", subtitle: "Pulses and Legumes", description: "Nutrient-rich lentils perfect for soups, stews, and export.", imgAlt: "Lentils" },
-  { title: "Faba Beans (Broad Beans)", href: "#", img: "/images/Faba beans (broad beans).jpg", subtitle: "Pulses and Legumes", description: "High-quality faba beans for culinary use and export.", imgAlt: "Faba beans / Broad beans" },
-  { title: "Red Kidney Bean", href: "#", img: "/images/Redy kidney bean.jpg", subtitle: "Haricot beans", description: "Premium red kidney beans for cooking and export.", imgAlt: "Red kidney beans" },
-  { title: "Pinto Beans", href: "#", img: "/images/Pinto beans.jpg", subtitle: "Haricot beans", description: "Quality pinto beans suitable for culinary use.", imgAlt: "Pinto beans" },
-  { title: "Red Speckled Bean", href: "#", img: "/images/Red speckled bean.jpg", subtitle: "Haricot beans", description: "High-quality red speckled beans for cooking.", imgAlt: "Red speckled beans" },
-  { title: "Large Light Brown Kidney Peas", href: "#", img: "/images/Large light brown kidney peas.jpg", subtitle: "Haricot beans", description: "Premium large brown kidney peas for culinary use.", imgAlt: "Large light brown kidney peas" },
-  { title: "White Bean", href: "#", img: "/images/White pea.jpg", subtitle: "Pulses and Legumes", description: "High-quality white Beans for  export.", imgAlt: "White peas" },
-  { title: "Green Mung Bean", href: "#", img: "/images/Green mung bean.jpg", subtitle: "Pulses and Legumes", description: "Premium green mung beans for sprouting and cooking.", imgAlt: "Green mung beans" },
-  { title: "Pigeon Bean", href: "#", img: "/images/Pigeon bean.jpg", subtitle: "Pulses and Legumes", description: "High-quality pigeon beans for culinary use.", imgAlt: "Pigeon beans" },
-  { title: "Lupin", href: "#", img: "/images/Lupin.jpg", subtitle: "Pulses and Legumes", description: "Nutritious lupin beans for cooking and food processing.", imgAlt: "Lupin beans" },
-
-  // 5. Spices and Herbs
-  { title: "Cardamom - Premium Spice", href: "#", img: "/images/Cardamom.jpg", subtitle: "Spices and Herbs", description: "High-quality cardamom for cooking, tea, and export.", imgAlt: "Cardamom pods" },
-  { title: "Ginger - Fresh and Aromatic", href: "#", img: "/images/Ginger.jpg", subtitle: "Spices and Herbs", description: "Fresh ginger for culinary and medicinal use.", imgAlt: "Fresh ginger roots" },
+  
+  
   { title: "Turmeric Finger", href: "#", img: "/images/Turmeric finger.jpg", subtitle: "Spices and Herbs", description: "Premium turmeric fingers for cooking and natural remedies.", imgAlt: "Turmeric finger roots" },
   { title: "Long Pepper", href: "#", img: "/images/Long pepper.jpg", subtitle: "Spices and Herbs", description: "Exotic long pepper for culinary use and medicinal purposes.", imgAlt: "Long pepper spice" },
-  { title: "Black Cumin", href: "#", img: "/images/Black cumin.jpg", subtitle: "Spices and Herbs", description: "High-quality black cumin seeds for cooking and herbal use.", imgAlt: "Black cumin seeds" },
+  
 
   // 6. Cereals
   { title: "Teff (used for injera)", href: "#", img: "/images/Teff.jpg", subtitle: "Cereals", description: "Ethiopian teff for making traditional injera. Nutritious and high-quality.", imgAlt: "Teff grains" },
-  { title: "Barley", href: "#", img: "/images/Barley.jpg", subtitle: "Cereals", description: "Premium barley grains suitable for food, brewing, and export.", imgAlt: "Barley grains" },
+  
+  // 1. Livestock and Processed Meat
+  { 
+    title: "Cattle for Sale - High-Quality Livestock", 
+    href: "#", 
+    img: "/images/Cattle.jpg", 
+    subtitle: "Livestock and Processed Meat",
+    description: "A Quality cattle available for sale. Ideal for meat production. Ethically raised livestock with proper documentation.",
+    imgAlt: "Healthy cattle raised for meat or breeding purposes"
+  },
+  { 
+    title: "Goats for Sale - Healthy Livestock", 
+    href: "#", 
+    img: "/images/Goat.jpg", 
+    subtitle: "Livestock and Processed Meat",
+    description: "Healthy goats available for sale, perfect for dairy or meat production. Ethically farmed and fully documented.",
+    imgAlt: "Goat livestock ready for sale"
+  },
+  { 
+    title: "Sheep for Sale - Premium Livestock", 
+    href: "#", 
+    img: "/images/Sheep.jpg", 
+    subtitle: "Livestock and Processed Meat",
+    description: "High-quality sheep for sale. Suitable for wool, meat, or breeding.",
+    imgAlt: "Premium sheep for sale"
+  },
+  // 2. Coffee and Tea
+  { 
+    title: "Arabica Coffee - Sidamo, Yirgacheffe, Harar", 
+    href: "#", 
+    img: "/images/Arebica Coffee.jpg", 
+    subtitle: "Coffee and Tea",
+    description: "Fresh Arabica coffee from Sidamo, Yirgacheffe, and Harar regions. Rich aroma and superior flavor for coffee lovers and specialty cafes.",
+    imgAlt: "Arabica coffee beans from Sidamo, Yirgacheffe, Harar"
+  },
+  { 
+    title: "Specialty Coffee Beans", 
+    href: "#", 
+    img: "/images/Speciality Coffee.webp", 
+    subtitle: "Coffee and Tea",
+    description: "Premium specialty coffee beans sourced from Ethiopia. Handpicked for exceptional taste and aroma. Perfect for connoisseurs and cafes.",
+    imgAlt: "Ethiopian specialty coffee beans"
+  },
+  { 
+    title: "Organic Tea Leaves", 
+    href: "#", 
+    img: "/images/Tea leaves.jpg", 
+    subtitle: "Coffee and Tea",
+    description: "High-quality organic tea leaves. Perfect for brewing refreshing, healthy, and aromatic teas. Sustainably sourced from Ethiopia.",
+    imgAlt: "Organic tea leaves for brewing"
+  },
 ];
 
 export const importProducts: Product[] = [

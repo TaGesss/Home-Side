@@ -5,22 +5,32 @@ const team = [
   {
     name: "Dawit Gessesse",
     role: "Owner and CEO",
-    img: "/images/Dawit Gessesse.jpg"
+    img: "/images/Dawit Gessesse.jpeg"
   },
   {
     name: "Asmamaw Wale",
     role: "Operations Manager",
       img: "/images/Asmamaw Wale.jpg"},
+      {
+        name: "Habtamu Mulie",
+        role: "Businees Advisor",
+        img: "/images/Habtamu.png" 
+      },
   {
     name: "Sisay Wolde",
     role: "Export Manager",
     img: "/images/Sisay Wolde.jpg"
+  },
+  {name: "Selamawit Wodaje ",
+    role: "Finance Head",
+    img: "/images/Selam.png"
   },
   {
     name: "Tariku Gessesse",
     role: "IT Manager",
     img: "/images/Tariku Gessesse.jpg" 
   },
+
 ];
 
 export default function AboutPage() {

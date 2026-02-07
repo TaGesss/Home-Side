@@ -16,6 +16,28 @@ export default function CustomersSection() {
 
   const customers = [
     {
+      name: "DHAMIA TRADING COMPANY",
+      description: "Global Pulses Supplier",
+      image: "/images/DHAMIA TRADING COMPANY.png",
+      category: "Export",
+      categoryDescription: "",
+      similarCustomers: ["KIVI LLC Russia", "pargan singapore pte ltd",
+        "STAR IDEA FOODSTAFF TRADING LLC", "KALLMANN PRODUCIOND GMBH IndustraBe",
+      ],
+    },
+    {
+      name: "Sinotruk International",
+      description: "Leading manufacturer of heavy-duty trucks and equipment",
+      image: "/images/sinotruk.png",
+      category: "Import from Various Companies",
+      categoryDescription: "",
+     similarCustomers:[
+        "DINGEMANSE Trucks and Trailers",
+        "HAS Trailer SAN.VE TIC.LTD.STL",
+        "Zoom Africa FZCO"
+      ],
+    },
+    {
       name: "Aser Construction PLC",
       description: "A dynamic Grade One General Contractor",
       image: "/images/aser-image.jpg",
@@ -79,14 +101,7 @@ export default function CustomersSection() {
         "Bamak Foam And Plastics Manufacturing",
       ],
     },
-    {
-      name: "DHAMIA TRADING COMPANY",
-      description: "Global Pulses Supplier",
-      image: "/images/DHAMIA TRADING COMPANY.png",
-      category: "Export",
-      categoryDescription: "",
-      similarCustomers: ["KIVI LLC Russia", "pargan singapore pte ltd"],
-    },
+    
     {
       name: "CCECC Ethiopia Construction Co., Ltd.",
       description:
@@ -102,17 +117,7 @@ export default function CustomersSection() {
         "DMC Real Estate",
       ],
     },
-    {
-      name: "Sinotruk International",
-      description: "Leading manufacturer of heavy-duty trucks and equipment",
-      image: "/images/sinotruk.png",
-      category: "Import from Various Companies",
-      categoryDescription: "",
-     similarCustomers:[
-        "DINGEMANSE Trucks and Trailers",
-        "HAS Trailer SAN.VE TIC.LTD.STL",
-      ],
-    },
+    
   ];
 
   // Colors matching the star watermarks (green and orange theme)
