@@ -103,26 +103,12 @@ export const exportProducts: Product[] = [
     description: "Premium specialty coffee beans sourced from Ethiopia. Handpicked for exceptional taste and aroma. Perfect for connoisseurs and cafes.",
     imgAlt: "Ethiopian specialty coffee beans"
   },
-  { 
-    title: "Organic Tea Leaves", 
-    href: "#", 
-    img: "/images/Tea leaves.jpg", 
-    subtitle: "Coffee and Tea",
-    description: "High-quality organic tea leaves. Perfect for brewing refreshing, healthy, and aromatic teas. Sustainably sourced from Ethiopia.",
-    imgAlt: "Organic tea leaves for brewing"
-  },
+  
 ];
 
 export const importProducts: Product[] = [
   // 1. Vehicles
-  { 
-    title: "Passenger Vehicles - High-Quality Cars", 
-    href: "#", 
-    img: "/images/Passenger Vehicles.jpg", 
-    subtitle: "Vehicles", 
-    description: "Reliable passenger vehicles suitable for personal and commercial use.", 
-    imgAlt: "Passenger vehicles for sale" 
-  },
+  
   { 
     title: "Commercial Vehicles - Trucks and Vans", 
     href: "#", 
@@ -138,48 +124,6 @@ export const importProducts: Product[] = [
     subtitle: "Vehicles", 
     description: "Special purpose vehicles for construction, medical, and specialized needs.", 
     imgAlt: "Special purpose vehicles" 
-  },
-
-  // 2. Spare Parts
-  { 
-    title: "Engine & Powertrain Parts", 
-    href: "#", 
-    img: "/images/Engine & Powertrain Parts.webp", 
-    subtitle: "Spare Parts", 
-    description: "High-quality engine and powertrain parts for vehicle maintenance and repair.", 
-    imgAlt: "Engine and powertrain spare parts" 
-  },
-  { 
-    title: "Electrical & Electronics", 
-    href: "#", 
-    img: "/images/Electrical & Electronics.webp", 
-    subtitle: "Spare Parts", 
-    description: "Reliable electrical and electronic components for vehicles.", 
-    imgAlt: "Vehicle electrical and electronic parts" 
-  },
-  { 
-    title: "Suspension & Brake Parts", 
-    href: "#", 
-    img: "/images/Suspension & Brake Parts.webp", 
-    subtitle: "Spare Parts", 
-    description: "Premium suspension and brake parts for safety and performance.", 
-    imgAlt: "Suspension and brake parts" 
-  },
-  { 
-    title: "Body Parts", 
-    href: "#", 
-    img: "/images/Body Parts.jpg", 
-    subtitle: "Spare Parts", 
-    description: "Vehicle body parts for repairs and replacements.", 
-    imgAlt: "Vehicle body parts" 
-  },
-  { 
-    title: "Tires & Wheels", 
-    href: "#", 
-    img: "/images/Tires & Wheels.jpg", 
-    subtitle: "Spare Parts", 
-    description: "Durable tires and wheels for all vehicle types.", 
-    imgAlt: "Vehicle tires and wheels" 
   },
 
   // 3. Construction Equipment
@@ -214,65 +158,5 @@ export const importProducts: Product[] = [
     subtitle: "Construction Equipment", 
     description: "Reliable generators and power equipment for industrial and construction use.", 
     imgAlt: "Generators and power equipment" 
-  },
-
-  // 4. Regulatory Equipment
-  { 
-    title: "Safety & Compliance Equipment", 
-    href: "#", 
-    img: "/images/Safety & Compliance Equipment.png", 
-    subtitle: "Regulatory Equipment", 
-    description: "Equipment for workplace safety and regulatory compliance.", 
-    imgAlt: "Safety and compliance equipment" 
-  },
-  { 
-    title: "Inspection & Diagnostic Equipment", 
-    href: "#", 
-    img: "/images/Inspection & Diagnostic Equipment.png", 
-    subtitle: "Regulatory Equipment", 
-    description: "Tools and equipment for inspection and diagnostics.", 
-    imgAlt: "Inspection and diagnostic tools" 
-  },
-  { 
-    title: "Traffic & Road Regulatory Items", 
-    href: "#", 
-    img: "/images/Traffic & Road Regulatory Items.jpg", 
-    subtitle: "Regulatory Equipment", 
-    description: "Traffic signs and road regulatory items for safe transport.", 
-    imgAlt: "Traffic and road safety items" 
-  },
-
-  // 5. Car Decor & Accessories
-  { 
-    title: "Interior Accessories", 
-    href: "#", 
-    img: "/images/Interior Accessories.jpg", 
-    subtitle: "Car Decor & Accessories", 
-    description: "Car interior accessories for comfort and style.", 
-    imgAlt: "Car interior accessories" 
-  },
-  { 
-    title: "Exterior Accessories", 
-    href: "#", 
-    img: "/images/Exterior Accessories.webp", 
-    subtitle: "Car Decor & Accessories", 
-    description: "Car exterior accessories for protection and aesthetics.", 
-    imgAlt: "Car exterior accessories" 
-  },
-  { 
-    title: "Lighting & Style", 
-    href: "#", 
-    img: "/images/Lighting & Style.jpg", 
-    subtitle: "Car Decor & Accessories", 
-    description: "Car lighting solutions and style enhancements.", 
-    imgAlt: "Car lighting and style accessories" 
-  },
-  { 
-    title: "Digital & Comfort Enhancements", 
-    href: "#", 
-    img: "/images/Digital & Comfort Enhancements.webp", 
-    subtitle: "Car Decor & Accessories", 
-    description: "Digital and comfort upgrades for modern vehicles.", 
-    imgAlt: "Car digital and comfort accessories" 
   },
 ];
